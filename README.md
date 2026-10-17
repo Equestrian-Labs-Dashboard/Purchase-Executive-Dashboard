@@ -1,6 +1,6 @@
 # Purchase Executive Dashboard
 
-Proyecto independiente de Inventory by Month. Diseño blanco/lila, filtros Store, Brand, Vendor, Month, Quarter y YTD; tabla de recepciones; cinco prioridades mensuales; revisión de cinco proveedores. No contiene cifras de ejemplo del mockup.
+Proyecto independiente de Inventory by Month. Diseño premium blanco cálido y verde ecuestre inspirado en la referencia de Ceci; datos visibles SOLO de Corro. Filtros Category, Brand, Vendor, Month, Quarter y YTD, tabla de recepciones con 30/60/90 días, dos filas de KPI, cinco prioridades mensuales y revisión de cinco proveedores. No contiene cifras de ejemplo del mockup.
 
 ## Ejecutar
 
@@ -34,13 +34,13 @@ La nueva versión del extractor solicita `cost_of_goods_sold`, `net_sales`, `gro
 
 ## Publicar como proyecto separado
 
-Repositorio sugerido, aún no creado: **Equestrian-Labs-Dashboard/purchase-executive-dashboard**.
+Repositorio existente: **Equestrian-Labs-Dashboard/Purchase-Executive-Dashboard**. NO crear otro repositorio ni cambiar Inventory.
 
 Subir el contenido de este proyecto a la raíz del repositorio, de modo que `package.json`, `index.html`, `assets/`, `scripts/`, `functions/`, `migrations/` y `data/` estén directamente allí. No subir el ZIP como un solo archivo.
 
 En Cloudflare Pages, conectar ese nuevo repositorio. Configuración: framework None, comando `npm run build`, directorio de salida `dist`, Node 24. El despliegue por Git de Cloudflare no depende de ejecutar Actions en el repositorio oficial.
 
-`site-config.json` mantiene el enlace a Inventory y los umbrales visuales (25% / 50%, orientativos). `showDiscounts` está desactivado hasta confirmar su incorporación. Los descuentos ya están contemplados en net sales; no se descuentan otra vez de Gross Profit 1.
+`site-config.json` mantiene el enlace a Inventory y los umbrales visuales (25% / 50%, orientativos). `showDiscounts` habilita la tarjeta de descuentos, PERO solo muestra valores si Shopify proporcionó gross sales y discounts con cobertura validada; con fuente incompleta dice Source required. Los descuentos ya están contemplados en net sales; no se descuentan otra vez de Gross Profit 1.
 
 ## Acceso y prioridades compartidas
 
@@ -69,9 +69,9 @@ Las cinco prioridades incluyen Markup, Sell-Through Rate, Units Goal, Success Me
 - Ventanas: fecha recibida incluida; fin inclusivo = fecha + 29/59/89 días. Valores acumulados, nunca sumarlos.
 - FIFO parte del stock inicial Shopify, consume ese stock antes de las recepciones, incluye devoluciones al stock y no asigna dos veces una venta. Aun con entradas verificadas, la atribución física al lote es una estimación FIFO.
 - Si no hay stock inicial o faltan días de ventas en el historial utilizado por FIFO, no se presenta un porcentaje. Períodos abiertos muestran In Progress y ventas so far.
-- El contador Unsold at 90d mide lo que quedaba sin vender en el día 90, no el stock actual del proveedor.
+- La última columna es **Current Stock**, la suma del stock más reciente de los SKU de esa recepción en el archivo importado. Incluye stock antiguo y posterior; no representa unidades no vendidas de un lote concreto ni stock en tiempo real.
 - YTD requiere enero–fecha para un total completo. El historial disponible empieza en junio; la aplicación lo señala y no presenta esos meses como un YTD completo.
-- Las cantidades pueden combinar tiendas; los valores monetarios requieren una moneda común y conocida.
+- La vista Purchase contiene únicamente Corro; el ZIP de datos compartido puede contener ambas tiendas porque Inventory necesita Corro y Cavali. Los valores monetarios requieren una moneda común y conocida.
 
 La tabla Double-check muestrea cinco proveedores con actividad en el período y permite registrar cifras de Shopify, referencia y diferencias. `audits/VERIFICACION-CINCO-PROVEEDORES.txt` documenta el contraste local; no afirma una revisión directa de Shopify ni inventa diferencias cero cuando la fuente falta.
 
@@ -86,3 +86,15 @@ La tabla Double-check muestrea cinco proveedores con actividad en el período y 
 - [Cloudflare: despliegue HTML](https://developers.cloudflare.com/pages/framework-guides/deploy-anything/)
 - [Cloudflare: D1 en Pages](https://developers.cloudflare.com/pages/functions/bindings/#d1-databases)
 Deployment verification — October 17, 2026
+
+
+## Versión 17 de octubre de 2026 — Alcance de Ceci
+
+- Purchase filtra Corro en el build y en la pantalla; ningún KPI ni tabla debe mezclar Cavali.
+- Main KPIs: Markup promedio de recepciones, Sell-Through 30 días, descuento promedio (solo si acreditado), Gross Margin 1 y Gross Profit 1 (solo con costo de ventas y ventas netas acreditados).
+- Secondary KPIs: Inventory COGS Value a costo de catálogo (etiquetado como tal), Retail Value, Units on hand, Monthly Rotation y COGS Sold. Fuentes faltantes muestran `Source required`.
+- Tabla de recepción: 30, 60 y 90 días, con unidades y porcentajes, semáforos suaves; Current Stock del último snapshot importado de sus SKU. No se presume que sea remanente de una recepción.
+- Prioridades: como máximo cinco, sin Owner y con metas/resultados. La base D1 y autenticación Cloudflare no se han cambiado.
+- Este export no contiene recepciones verificadas de Corro: no debe presentarse el mockup como datos reales.
+- No habilitar `npm run build:sync` en Cloudflare Purchase. Comando `npm run build`, salida `dist` y raíz de repositorio.
+- Las exclusiones definitivas de Sponsorship, Marketing, Team Rider y Upsell gratis, y la inclusión de ventas pagadas con Gift Card, aún precisan contraste por pedido pagado con Shopify; no considerar completada la validación hasta resolverlo.

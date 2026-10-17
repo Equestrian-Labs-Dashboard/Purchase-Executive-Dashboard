@@ -2,5 +2,5 @@
   "inventoryUrl": "https://inventory-by-month-report.pages.dev/tracking",
   "attentionThreshold": 25,
   "strongThreshold": 50,
-  "showDiscounts": false
+  "showDiscounts": true
 }

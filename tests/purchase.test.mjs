@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {allocateDatedCohorts} from '../scripts/cohort-allocation.mjs';
-import {receiptGroups,receiptTotals,selectedPerformance,periodRange,completeCoverage} from '../assets/js/purchaseCore.mjs';
+import {receiptGroups,receiptTotals,selectedPerformance,periodRange,completeCoverage,currentReceiptSkuStock,matches} from '../assets/js/purchaseCore.mjs';
 import {emptyPlan,carryForward,validatePlan,nextMonth} from '../assets/js/priorities.mjs';
 const item={store:'corro',vendor:'Vendor A',sku:'TEST',variantId:'v1',inventoryItemId:'i1',currency:'USD',retailCurrency:'USD',unitCost:10,retailPrice:15};
 const receipt=(date,units,id)=>({...item,receiptId:id,cohortDate:date,receivedAt:date,unitsReceived:units,cohortType:'receipt',dateBasis:'received',costBasis:'purchase_order_cost'});
@@ -39,3 +39,26 @@ test('YTD never claims missing Jan–May; vendor, store and brand filters are in
 test('plans carry unfinished rows once, retain source results and protect full targets',()=>{const a=emptyPlan('2026-12'),b=emptyPlan('2027-01');a.rows[0].priority='Buy';a.rows[0].results='reviewed';a.rows[1].priority='Done';a.rows[1].status='Done';const copied=carryForward(a,b);assert.equal(copied.rows.filter(r=>r.priority).length,1);assert.equal(copied.rows[0].results,'');assert.equal(a.rows[0].results,'reviewed');assert.deepEqual(carryForward(a,copied),copied);b.rows.forEach(r=>r.priority='Already planned');assert.throws(()=>carryForward(a,b),/free slots/);assert.equal(nextMonth('2026-12'),'2027-01');});
 test('plans reject invalid goals, duplicate identities and Owner is not persisted',()=>{const p=emptyPlan('2026-07');p.rows[0].owner='obsolete';assert.equal(validatePlan(p).rows[0].owner,undefined);p.rows[0].sellThrough='101';assert.throws(()=>validatePlan(p),/numeric/);p.rows[0].sellThrough='';p.rows[1].id=p.rows[0].id;assert.throws(()=>validatePlan(p),/identity/);});
 test('import pads five slots and carry protects previously populated blank identities',()=>{const a=emptyPlan('2026-07'),b=emptyPlan('2026-08');a.rows[0].priority='Incoming';b.rows[2].id='2026-08-blank-2';b.rows[2].priority='Existing';const result=validatePlan(carryForward(a,b));assert.equal(new Set(result.rows.map(r=>r.id)).size,5);assert.equal(result.rows.filter(r=>r.priority).length,2);assert.equal(validatePlan({...a,rows:a.rows.slice(0,1)}).rows.length,5);});
+
+test('current stock is the latest stock of received SKUs, not units remaining at day 90',()=>{
+ const g={store:'corro',vendor:'Vendor A',rows:[{variantId:'v1',sku:'A',unitsReceived:20},{variantId:'v1',sku:'A',unitsReceived:10},{variantId:'v2',sku:'B',unitsReceived:15}]};
+ const snapshot=[{store:'corro',vendor:'Vendor A',variantId:'v1',sku:'A',currentUnits:3},{store:'corro',vendor:'Vendor A',variantId:'v2',sku:'B',currentUnits:6},{store:'cavali',vendor:'Vendor A',variantId:'v1',sku:'A',currentUnits:999}];
+ assert.equal(currentReceiptSkuStock(snapshot,g),9);
+ assert.equal(currentReceiptSkuStock(snapshot.slice(0,1),g),null);
+ assert.equal(currentReceiptSkuStock(snapshot, {...g,rows:[{sku:'A'}]}),3);
+});
+test('monthly unit rotation never adds stock snapshots from quarter/month together',()=>{
+ const d=fixture([]);d.catalog=[{...item,currentUnits:5,unitCost:10,retailPrice:15,category:'Saddles'}];
+ d.monthly=[{store:'corro',vendor:'Vendor A',brand:'Unspecified',category:'Saddles',month:'2026-07',startingUnits:10,endingUnits:8,unitsSold:9},{store:'corro',vendor:'Vendor A',brand:'Unspecified',category:'Saddles',month:'2026-08',startingUnits:8,endingUnits:6,unitsSold:5}];
+ const month=selectedPerformance(d,{...filters,category:'Saddles'});assert.equal(month.monthlyRotation,1);
+ assert.equal(month.currentStockUnits,5);assert.equal(month.inventoryCost,50);assert.equal(month.inventoryRetail,75);
+ assert.equal(selectedPerformance(d,{...filters,category:'Boots'}).currentStockUnits,null);
+ assert.equal(selectedPerformance(d,{...filters,type:'quarter',period:'2026-Q3'}).monthlyRotation,null);
+ assert.equal(matches({...item,category:'Saddles'},{...filters,category:'Boots'}),false);
+});
+test('gross margin and discounts require independently validated Shopify financial fields',()=>{
+ const d=fixture([],[{...item,soldAt:'2026-07-02',quantityOrdered:4,netUnits:3,netSales:90,grossSales:120,discounts:-30,costOfGoodsSold:54}]);
+ const p=selectedPerformance(d,filters);assert.equal(p.grossProfit,36);assert.equal(p.grossMargin,40);assert.equal(p.discountPct,25);
+ delete d.meta.stores.corro.salesDailyCoverage['2026-07'].financialMetrics;
+ assert.equal(selectedPerformance(d,filters).discountPct,null);
+});
