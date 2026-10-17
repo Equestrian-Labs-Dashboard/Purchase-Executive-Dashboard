@@ -85,3 +85,4 @@ La tabla Double-check muestrea cinco proveedores con actividad en el período y 
 - [Shopify: métricas de ventas](https://shopify.dev/docs/api/shopifyql/2026-07/schemas/sales_revenue/sales)
 - [Cloudflare: despliegue HTML](https://developers.cloudflare.com/pages/framework-guides/deploy-anything/)
 - [Cloudflare: D1 en Pages](https://developers.cloudflare.com/pages/functions/bindings/#d1-databases)
+Deployment verification — October 17, 2026
