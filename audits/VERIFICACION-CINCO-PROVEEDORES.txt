@@ -1,0 +1,15 @@
+VERIFICACION LOCAL DE CINCO PROVEEDORES — 15 OCTUBRE 2026
+
+Fuente: 2026-10-15T03:40:02.871Z
+Seleccion: Corro, julio 2026. Muestra reproducible de proveedores con actividad.
+Proveedor | Ordered fuente/dashboard | Net fuente/dashboard | Diferencia unidades
+SBS Equine Products | 1/1 | 1/1 | 0/0
+Corro | 7/7 | 6/6 | 0/0
+Keratex | 6/6 | 6/6 | 0/0
+AJR Sport | 4/4 | 4/4 | 0/0
+Omega Alpha | 1/1 | 1/1 | 0/0
+
+En los cinco casos: Units In, Date Received, COGS de recepcion, Markup de compra y 30/60/90 de recepcion NO se pueden contrastar porque el archivo tiene cero recepciones confirmadas.
+No se registra diferencia 0 en esos campos: se registra ausencia de fuente.
+No hubo acceso directo a Shopify en esta verificacion. Las cifras de ventas fueron contrastadas contra las filas originales descargadas.
+El formulario Double-check permite capturar cifras comprobadas en Shopify, conservar la referencia y exportar diferencias.

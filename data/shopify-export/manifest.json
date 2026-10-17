@@ -1,0 +1,277 @@
+{
+  "format": "inventory-portable-source",
+  "formatVersion": 1,
+  "generatedAt": "2026-10-15T03:40:02.871Z",
+  "base": {
+    "file": "base_d9ec1ffeee2d25bbfe35a743fccb166de71d57642dcb99f7cfc028f8eae612cd.json.gz",
+    "bytes": 2370,
+    "rawBytes": 13076,
+    "sha256": "d9ec1ffeee2d25bbfe35a743fccb166de71d57642dcb99f7cfc028f8eae612cd"
+  },
+  "arrays": {
+    "nativeRestockEvents": [
+      {
+        "file": "nativeRestockEvents_0001_9ade1083019aa62202de7a0dbc949a3d9b33aaff777865b1abf21b97730288b1.json.gz",
+        "bytes": 8336,
+        "rawBytes": 84317,
+        "sha256": "9ade1083019aa62202de7a0dbc949a3d9b33aaff777865b1abf21b97730288b1"
+      }
+    ],
+    "observedRestockCohorts": [
+      {
+        "file": "observedRestockCohorts_0001_c18361e7582f0bc130d8b7e26f3cb0fab1b2ac4fe8db1e322ee826e01b21106a.json.gz",
+        "bytes": 10043,
+        "rawBytes": 126290,
+        "sha256": "c18361e7582f0bc130d8b7e26f3cb0fab1b2ac4fe8db1e322ee826e01b21106a"
+      }
+    ],
+    "cohorts": [],
+    "cohortInputs": [],
+    "currentInventory": [
+      {
+        "file": "currentInventory_0001_b4b75ae3d67a33a19367b010a860e0b5a0404c152517eb7cd8ec34c81566f986.json.gz",
+        "bytes": 153348,
+        "rawBytes": 2096751,
+        "sha256": "b4b75ae3d67a33a19367b010a860e0b5a0404c152517eb7cd8ec34c81566f986"
+      },
+      {
+        "file": "currentInventory_0002_a20ee91c021341ea319e7bd2807563d8a314a1d97ed59754796022d04a11a07c.json.gz",
+        "bytes": 122630,
+        "rawBytes": 2097052,
+        "sha256": "a20ee91c021341ea319e7bd2807563d8a314a1d97ed59754796022d04a11a07c"
+      },
+      {
+        "file": "currentInventory_0003_60f62920426a47bc5ff1e2eb8c5a62d9add15d2f9f7931f9e3efccd278a6a411.json.gz",
+        "bytes": 118807,
+        "rawBytes": 2096887,
+        "sha256": "60f62920426a47bc5ff1e2eb8c5a62d9add15d2f9f7931f9e3efccd278a6a411"
+      },
+      {
+        "file": "currentInventory_0004_579ad9af831ae9d91eb2802cc84008b356ad95e57ebeb4d9ed32dc2fc4d53159.json.gz",
+        "bytes": 109964,
+        "rawBytes": 2096716,
+        "sha256": "579ad9af831ae9d91eb2802cc84008b356ad95e57ebeb4d9ed32dc2fc4d53159"
+      },
+      {
+        "file": "currentInventory_0005_ca53854bd473a319d51848e9e754e9e54dbe6d1dcadb33e501eb96f892cc90b4.json.gz",
+        "bytes": 60436,
+        "rawBytes": 1038944,
+        "sha256": "ca53854bd473a319d51848e9e754e9e54dbe6d1dcadb33e501eb96f892cc90b4"
+      }
+    ],
+    "monthlyInventory": [
+      {
+        "file": "monthlyInventory_0001_f99c42f0310c2c8a7f01433dcb37c9f0bdc347faa1f693349d4b931938177dbe.json.gz",
+        "bytes": 123647,
+        "rawBytes": 2096838,
+        "sha256": "f99c42f0310c2c8a7f01433dcb37c9f0bdc347faa1f693349d4b931938177dbe"
+      },
+      {
+        "file": "monthlyInventory_0002_7585df8d844497ee68a193c08be0c05b61cf61894b477468534582b99170e4bd.json.gz",
+        "bytes": 108069,
+        "rawBytes": 2096826,
+        "sha256": "7585df8d844497ee68a193c08be0c05b61cf61894b477468534582b99170e4bd"
+      },
+      {
+        "file": "monthlyInventory_0003_d78f034ef03eab71c3452d57ae6dba84cfd19feebd7f9c1f79905a79f2171ece.json.gz",
+        "bytes": 106041,
+        "rawBytes": 2096669,
+        "sha256": "d78f034ef03eab71c3452d57ae6dba84cfd19feebd7f9c1f79905a79f2171ece"
+      },
+      {
+        "file": "monthlyInventory_0004_933143f3fffaa236d2cf74a4da624f569828835d047721048443ba1ec913aced.json.gz",
+        "bytes": 90616,
+        "rawBytes": 2096884,
+        "sha256": "933143f3fffaa236d2cf74a4da624f569828835d047721048443ba1ec913aced"
+      },
+      {
+        "file": "monthlyInventory_0005_8f47c11052031968141b87930c48256e3054f332c4a790207585a30e13456efa.json.gz",
+        "bytes": 105307,
+        "rawBytes": 2096348,
+        "sha256": "8f47c11052031968141b87930c48256e3054f332c4a790207585a30e13456efa"
+      },
+      {
+        "file": "monthlyInventory_0006_40626fd047cb97617d90e8f1e78aff5ea14da24c8041783f02ce135c4b8b01e3.json.gz",
+        "bytes": 116628,
+        "rawBytes": 2096773,
+        "sha256": "40626fd047cb97617d90e8f1e78aff5ea14da24c8041783f02ce135c4b8b01e3"
+      },
+      {
+        "file": "monthlyInventory_0007_b1dac66980e24f7b68a18713ab80fad9aa2f1c2647299c5a59ac98aeb9dec45e.json.gz",
+        "bytes": 105541,
+        "rawBytes": 2096835,
+        "sha256": "b1dac66980e24f7b68a18713ab80fad9aa2f1c2647299c5a59ac98aeb9dec45e"
+      },
+      {
+        "file": "monthlyInventory_0008_5a04347eb19bc9510c1a612c17e1f9f4f1b85ff7801a04f9e6eff2f80aac0938.json.gz",
+        "bytes": 104035,
+        "rawBytes": 2096727,
+        "sha256": "5a04347eb19bc9510c1a612c17e1f9f4f1b85ff7801a04f9e6eff2f80aac0938"
+      },
+      {
+        "file": "monthlyInventory_0009_cf3f466c5813243487e16b24aa6d7fc8b536543352f9e5568891e6c4794358c0.json.gz",
+        "bytes": 88423,
+        "rawBytes": 2096365,
+        "sha256": "cf3f466c5813243487e16b24aa6d7fc8b536543352f9e5568891e6c4794358c0"
+      },
+      {
+        "file": "monthlyInventory_0010_10c7a247cc51fb58c5a752615996d03e8c65dbe6e1fdaa9288094dfb612a9445.json.gz",
+        "bytes": 109647,
+        "rawBytes": 2096599,
+        "sha256": "10c7a247cc51fb58c5a752615996d03e8c65dbe6e1fdaa9288094dfb612a9445"
+      },
+      {
+        "file": "monthlyInventory_0011_97889cbfc796258f345ffe19728e37e6bf782f8452c52c9c342c8968a81a89e9.json.gz",
+        "bytes": 114193,
+        "rawBytes": 2096501,
+        "sha256": "97889cbfc796258f345ffe19728e37e6bf782f8452c52c9c342c8968a81a89e9"
+      },
+      {
+        "file": "monthlyInventory_0012_ba7d95c424ca62b9feeb06d0899dba7a6c871019d129ec53d3fa46e566f891bb.json.gz",
+        "bytes": 105629,
+        "rawBytes": 2097147,
+        "sha256": "ba7d95c424ca62b9feeb06d0899dba7a6c871019d129ec53d3fa46e566f891bb"
+      },
+      {
+        "file": "monthlyInventory_0013_10e9bf4c132439cdeff5187285fbb21057daaadad8532e8b06f1c9eb14f95127.json.gz",
+        "bytes": 99277,
+        "rawBytes": 2096282,
+        "sha256": "10e9bf4c132439cdeff5187285fbb21057daaadad8532e8b06f1c9eb14f95127"
+      },
+      {
+        "file": "monthlyInventory_0014_ba30deecf40e431417e08da9ff3c67dbd7ad2bd04f74f03dabb919b9d83603f9.json.gz",
+        "bytes": 85970,
+        "rawBytes": 2096785,
+        "sha256": "ba30deecf40e431417e08da9ff3c67dbd7ad2bd04f74f03dabb919b9d83603f9"
+      },
+      {
+        "file": "monthlyInventory_0015_df2ddb93a1af1c24cc1e0028db4fce0e0fb6ab199a5c74bf5664471ad9f3e15b.json.gz",
+        "bytes": 117590,
+        "rawBytes": 2096634,
+        "sha256": "df2ddb93a1af1c24cc1e0028db4fce0e0fb6ab199a5c74bf5664471ad9f3e15b"
+      },
+      {
+        "file": "monthlyInventory_0016_ddb1b38292d7e6d571b0316d9a2c4ea90e75ac0c22aa2ace1b68a10f5c7a1b25.json.gz",
+        "bytes": 116097,
+        "rawBytes": 2096841,
+        "sha256": "ddb1b38292d7e6d571b0316d9a2c4ea90e75ac0c22aa2ace1b68a10f5c7a1b25"
+      },
+      {
+        "file": "monthlyInventory_0017_bf51a1a41789e92be8901c8e117074fbdc892e3a8d9d090b9682c7dcd90ab92d.json.gz",
+        "bytes": 100783,
+        "rawBytes": 2097151,
+        "sha256": "bf51a1a41789e92be8901c8e117074fbdc892e3a8d9d090b9682c7dcd90ab92d"
+      },
+      {
+        "file": "monthlyInventory_0018_ff90aa8fd0a0c71b7f47b6412ac09f1c3f981e64531c1ff3ec424d10b68cd7a5.json.gz",
+        "bytes": 95205,
+        "rawBytes": 2096918,
+        "sha256": "ff90aa8fd0a0c71b7f47b6412ac09f1c3f981e64531c1ff3ec424d10b68cd7a5"
+      },
+      {
+        "file": "monthlyInventory_0019_4bc633895131996fed021e2d944bdcf5b3a0ffa10d90619659a901210ebbdf72.json.gz",
+        "bytes": 88385,
+        "rawBytes": 2096403,
+        "sha256": "4bc633895131996fed021e2d944bdcf5b3a0ffa10d90619659a901210ebbdf72"
+      },
+      {
+        "file": "monthlyInventory_0020_fca86537fe90e55ef306534e4342aa6b453e9dcf6ce48c0f448d173f4c736ed7.json.gz",
+        "bytes": 119914,
+        "rawBytes": 2097143,
+        "sha256": "fca86537fe90e55ef306534e4342aa6b453e9dcf6ce48c0f448d173f4c736ed7"
+      },
+      {
+        "file": "monthlyInventory_0021_7866c442efd95747cc7c6b479aea689ac23b2c38e84478597a2126cff33004e9.json.gz",
+        "bytes": 108903,
+        "rawBytes": 2096461,
+        "sha256": "7866c442efd95747cc7c6b479aea689ac23b2c38e84478597a2126cff33004e9"
+      },
+      {
+        "file": "monthlyInventory_0022_59c1e1a5282ba6031a3f31146865ca9f376627263225f6d64404ae42e53e31e2.json.gz",
+        "bytes": 100303,
+        "rawBytes": 2097012,
+        "sha256": "59c1e1a5282ba6031a3f31146865ca9f376627263225f6d64404ae42e53e31e2"
+      },
+      {
+        "file": "monthlyInventory_0023_899cff3ec386269911fd25337d462e6ca0a64ef76aae1daed7ceea0d78e60de1.json.gz",
+        "bytes": 90026,
+        "rawBytes": 2096501,
+        "sha256": "899cff3ec386269911fd25337d462e6ca0a64ef76aae1daed7ceea0d78e60de1"
+      },
+      {
+        "file": "monthlyInventory_0024_d807ead216e086863adada396c990cd91d0324014787990f753a6bc33c247b34.json.gz",
+        "bytes": 95214,
+        "rawBytes": 2096930,
+        "sha256": "d807ead216e086863adada396c990cd91d0324014787990f753a6bc33c247b34"
+      },
+      {
+        "file": "monthlyInventory_0025_4912f3f8778f7ede4cb41a0d8aaf9f14f9615e8500b3460d251515865b2b3270.json.gz",
+        "bytes": 89616,
+        "rawBytes": 2096769,
+        "sha256": "4912f3f8778f7ede4cb41a0d8aaf9f14f9615e8500b3460d251515865b2b3270"
+      },
+      {
+        "file": "monthlyInventory_0026_723a2db2296bd1ede4a44ade295b0c4d02fdca38dc857a498f75afb9ee41893c.json.gz",
+        "bytes": 1075,
+        "rawBytes": 7633,
+        "sha256": "723a2db2296bd1ede4a44ade295b0c4d02fdca38dc857a498f75afb9ee41893c"
+      }
+    ],
+    "monthlyAdjustments": [
+      {
+        "file": "monthlyAdjustments_0001_fa015060f3d60c32e273c3cfc4aa7e808dd17a3c95ed2598536d1c6e869b1033.json.gz",
+        "bytes": 143954,
+        "rawBytes": 2096554,
+        "sha256": "fa015060f3d60c32e273c3cfc4aa7e808dd17a3c95ed2598536d1c6e869b1033"
+      },
+      {
+        "file": "monthlyAdjustments_0002_6a638d1b410c0ba5d7ff3415d701b12c8ed81de9ef2cb7fc7f6d9d3118f67c93.json.gz",
+        "bytes": 133697,
+        "rawBytes": 2097104,
+        "sha256": "6a638d1b410c0ba5d7ff3415d701b12c8ed81de9ef2cb7fc7f6d9d3118f67c93"
+      },
+      {
+        "file": "monthlyAdjustments_0003_b59f5b5c16379af56f521a7160c636e2db1d8e6dafca493223fd6f727b325eb2.json.gz",
+        "bytes": 137967,
+        "rawBytes": 2096808,
+        "sha256": "b59f5b5c16379af56f521a7160c636e2db1d8e6dafca493223fd6f727b325eb2"
+      },
+      {
+        "file": "monthlyAdjustments_0004_f07ddf5d5b5bca1183aa0697bfbdac729845d33de6a8c3d6a6e5bb145a17ebe9.json.gz",
+        "bytes": 26088,
+        "rawBytes": 500049,
+        "sha256": "f07ddf5d5b5bca1183aa0697bfbdac729845d33de6a8c3d6a6e5bb145a17ebe9"
+      }
+    ],
+    "sales": [
+      {
+        "file": "sales_0001_9355414cd26b2a7b2f695535f08b965059096038b4838266b4a1b2be251124fa.json.gz",
+        "bytes": 233676,
+        "rawBytes": 2096753,
+        "sha256": "9355414cd26b2a7b2f695535f08b965059096038b4838266b4a1b2be251124fa"
+      },
+      {
+        "file": "sales_0002_67bf343539f9c23cfca4ff9684e77595acfb9cd7e0a6da1942a6b76a61207a7b.json.gz",
+        "bytes": 47380,
+        "rawBytes": 491440,
+        "sha256": "67bf343539f9c23cfca4ff9684e77595acfb9cd7e0a6da1942a6b76a61207a7b"
+      }
+    ],
+    "shipments": [],
+    "purchaseOrders": [],
+    "receipts": []
+  },
+  "counts": {
+    "nativeRestockEvents": 89,
+    "observedRestockCohorts": 89,
+    "cohorts": 0,
+    "cohortInputs": 0,
+    "currentInventory": 14954,
+    "monthlyInventory": 58178,
+    "monthlyAdjustments": 10018,
+    "sales": 2847,
+    "shipments": 0,
+    "purchaseOrders": 0,
+    "receipts": 0
+  }
+}

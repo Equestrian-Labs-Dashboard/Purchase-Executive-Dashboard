@@ -1,0 +1,29 @@
+{
+  "generatedAt": "2026-10-15T03:40:02.871Z",
+  "counts": {
+    "currentInventory": {
+      "rows": 14954,
+      "sha256": "d77f47b03064bc476c0fa0322c4c695aa3e1f4d3bc3bb656c45ef2496416934e",
+      "preserved": true
+    },
+    "monthlyInventory": {
+      "rows": 58178,
+      "sha256": "5972e613b2936c9ea6f460581dde86b75e767da52cc91a8f0b38802bac654bae",
+      "preserved": true
+    },
+    "monthlyAdjustments": {
+      "rows": 10018,
+      "sha256": "92617077dbfd42649de102e2cf11e3b1710a9ef07f042475fb51bec1b626318d",
+      "preserved": true
+    },
+    "sales": {
+      "rows": 2847,
+      "sha256": "767b98a6639b233f1a218325861d7c6780f0e319da34afc5cd0d0050f35c8ff9",
+      "preserved": true
+    }
+  },
+  "receipts": 0,
+  "observed": 1,
+  "returns": 88,
+  "publishedBytes": 2041397
+}
