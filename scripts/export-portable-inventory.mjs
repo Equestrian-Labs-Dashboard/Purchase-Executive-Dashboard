@@ -47,11 +47,11 @@ export function validatePortableInventory(data) {
     for (const month of monthsBetween(start, through)) {
       if (!rowMonths.has(`${store}|${month}`)) throw new Error(`${store} ${month}: monthly inventory history is missing`);
       const coverage = info.nativeDailyCoverage?.[month];
-      if (!coverage || !['success', 'cached'].includes(coverage.status)) throw new Error(`${store} ${month}: dated inventory adjustments are incomplete`);
+      if (!coverage || !['success', 'cached'].includes(coverage.status) || (coverage.source === 'manual_shopifyql_csv' && !info.manualCsvImportedMonths?.includes(month))) throw new Error(`${store} ${month}: dated inventory adjustments are incomplete`);
     }
     for (const month of monthsBetween(salesStart, through)) {
       const coverage = info.salesDailyCoverage?.[month];
-      if (coverage?.status !== 'success' || coverage.source !== 'shopifyql_sales') throw new Error(`${store} ${month}: daily Shopify sales are incomplete`);
+      if (coverage?.status !== 'success' || !['shopifyql_sales', 'manual_shopifyql_csv'].includes(coverage.source) || (coverage.source === 'manual_shopifyql_csv' && !info.manualCsvImportedMonths?.includes(month))) throw new Error(`${store} ${month}: daily Shopify sales are incomplete`);
       const expectedStart = month === salesStart.slice(0, 7) ? salesStart : `${month}-01`;
       const [year, monthNumber] = month.split('-').map(Number);
       const expectedEnd = month === through.slice(0, 7) ? through : new Date(Date.UTC(year, monthNumber, 0)).toISOString().slice(0, 10);

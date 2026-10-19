@@ -1,0 +1,5064 @@
+{
+  "schema": "shopifyql-receipt-evidence-v1",
+  "store": "corro",
+  "month": "2026-07",
+  "source": "ShopifyQL CSV: inventory_adjustment_history and sales (net_items_sold)",
+  "warning": "Net items sold are NOT FIFO lot sales; opening inventory is not included. Costs and supplier name are not present in these exports.",
+  "receipts": [],
+  "salesByDay": [
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/29060048748589",
+      "sku": "20420001",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/29060117364781",
+      "sku": "54-906-2-0",
+      "netItemsSold": -1
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/29152942129197",
+      "sku": "KFM100L181",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/29227813208109",
+      "sku": "091-10350",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/29229190250541",
+      "sku": "KHP",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/29229199687725",
+      "sku": "091-10380",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/32244957052986",
+      "sku": "23470003",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/32256530645050",
+      "sku": "40801 125 00",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/39272273739834",
+      "sku": "819112",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/39437586694202",
+      "sku": "RAM-TTR-P",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/39437624803386",
+      "sku": "100502018",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/39437625425978",
+      "sku": "90452",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/39437648035898",
+      "sku": "2015",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/39484412657722",
+      "sku": "111475",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/39495981498426",
+      "sku": "KCM421-L-121",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/40128291733562",
+      "sku": "ELEMEQ-HOOF OIL-16",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/40153717178426",
+      "sku": "20334802",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/40153717243962",
+      "sku": "20335003",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/40153717276730",
+      "sku": "20334803",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/40173643956282",
+      "sku": "8881251782",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/40180250837050",
+      "sku": "SUM408",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/40320101318714",
+      "sku": "8881501400",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/40429588676666",
+      "sku": "AFAR90-IBWT-78",
+      "netItemsSold": 3
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/40513696497722",
+      "sku": "20620002",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/40514333573178",
+      "sku": "21380203",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/40618658496570",
+      "sku": "8881516911",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/40696653185082",
+      "sku": "2030",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/40798200758330",
+      "sku": "KMPNC-P-2017",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/40845292568634",
+      "sku": "BKSHOW23LB",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/40867360571450",
+      "sku": "NE05CBRF",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/40899700686906",
+      "sku": "43260503",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/40960551223354",
+      "sku": "IT07208110",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/40966443171898",
+      "sku": "ACRN24-BJI0-84",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/41064612528186",
+      "sku": "000111",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/41273501843514",
+      "sku": "sku-53634206564643-FEI",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-01",
+      "variantId": "gid://shopify/ProductVariant/41274439204922",
+      "sku": "WINTER405",
+      "netItemsSold": 3
+    },
+    {
+      "day": "2026-07-02",
+      "variantId": "gid://shopify/ProductVariant/29229173571629",
+      "sku": "990006",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-02",
+      "variantId": "gid://shopify/ProductVariant/29229203488813",
+      "sku": "053-90422",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-02",
+      "variantId": "gid://shopify/ProductVariant/31321779568698",
+      "sku": "68-907-10-0",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-02",
+      "variantId": "gid://shopify/ProductVariant/31467657658426",
+      "sku": "35-4043-BL",
+      "netItemsSold": 4
+    },
+    {
+      "day": "2026-07-02",
+      "variantId": "gid://shopify/ProductVariant/31803324006458",
+      "sku": "11-4151",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-02",
+      "variantId": "gid://shopify/ProductVariant/39301379457082",
+      "sku": "11-4193SPK-M1",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-02",
+      "variantId": "gid://shopify/ProductVariant/39437647904826",
+      "sku": "20420003",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-02",
+      "variantId": "gid://shopify/ProductVariant/40116705722426",
+      "sku": "21370203",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-02",
+      "variantId": "gid://shopify/ProductVariant/40140549980218",
+      "sku": "20339004",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-02",
+      "variantId": "gid://shopify/ProductVariant/40153717145658",
+      "sku": "20335002",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-02",
+      "variantId": "gid://shopify/ProductVariant/40153717243962",
+      "sku": "20335003",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-02",
+      "variantId": "gid://shopify/ProductVariant/40429588643898",
+      "sku": "AFAR90-IBWT-75",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-02",
+      "variantId": "gid://shopify/ProductVariant/40790970859578",
+      "sku": "20199002",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-02",
+      "variantId": "gid://shopify/ProductVariant/40790970892346",
+      "sku": "20199003",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-02",
+      "variantId": "gid://shopify/ProductVariant/40815663611962",
+      "sku": "DC-NY-S",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-02",
+      "variantId": "gid://shopify/ProductVariant/40899700654138",
+      "sku": "43260502",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-02",
+      "variantId": "gid://shopify/ProductVariant/40899700686906",
+      "sku": "43260503",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-02",
+      "variantId": "gid://shopify/ProductVariant/40901414223930",
+      "sku": "721PPS-75-2021",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-02",
+      "variantId": "gid://shopify/ProductVariant/41072587538490",
+      "sku": "sku-31685372149865",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-02",
+      "variantId": "gid://shopify/ProductVariant/41072587702330",
+      "sku": "sku-33062711689321",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-02",
+      "variantId": "gid://shopify/ProductVariant/41225710501946",
+      "sku": "IT08328005",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-02",
+      "variantId": "gid://shopify/ProductVariant/41272271896634",
+      "sku": "B2APUS",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-02",
+      "variantId": "gid://shopify/ProductVariant/41274439204922",
+      "sku": "WINTER405",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-02",
+      "variantId": "gid://shopify/ProductVariant/41388191055930",
+      "sku": "StallMat-T125BK",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-03",
+      "variantId": "gid://shopify/ProductVariant/29060127064109",
+      "sku": "12029-1",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-03",
+      "variantId": "gid://shopify/ProductVariant/29229160202285",
+      "sku": "82193050",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-03",
+      "variantId": "gid://shopify/ProductVariant/39437614743610",
+      "sku": "450502",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-03",
+      "variantId": "gid://shopify/ProductVariant/39468867682362",
+      "sku": "88-1517-3",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-03",
+      "variantId": "gid://shopify/ProductVariant/39495981563962",
+      "sku": "KCM421-L-2017",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-03",
+      "variantId": "gid://shopify/ProductVariant/39536524001338",
+      "sku": "NO1-QT DS",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-03",
+      "variantId": "gid://shopify/ProductVariant/40039235190842",
+      "sku": "PCWFP200-TAN",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-03",
+      "variantId": "gid://shopify/ProductVariant/40116844396602",
+      "sku": "20640502",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-03",
+      "variantId": "gid://shopify/ProductVariant/40153717112890",
+      "sku": "20336802",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-03",
+      "variantId": "gid://shopify/ProductVariant/40341117861946",
+      "sku": "DMSOROLLON",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-03",
+      "variantId": "gid://shopify/ProductVariant/40429588709434",
+      "sku": "AFAR90-IBWT-81",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-03",
+      "variantId": "gid://shopify/ProductVariant/40538616856634",
+      "sku": "6596d5ce0b756",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-03",
+      "variantId": "gid://shopify/ProductVariant/40594110021690",
+      "sku": "90.195.900100000",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-03",
+      "variantId": "gid://shopify/ProductVariant/40798209900602",
+      "sku": "KPNP-M-2017",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-03",
+      "variantId": "gid://shopify/ProductVariant/40815657123898",
+      "sku": "CGBEM",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-03",
+      "variantId": "gid://shopify/ProductVariant/40815657582650",
+      "sku": "SLS-RD-L",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-03",
+      "variantId": "gid://shopify/ProductVariant/40815662530618",
+      "sku": "CGSBS",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-03",
+      "variantId": "gid://shopify/ProductVariant/40827293139002",
+      "sku": "1006939016",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-03",
+      "variantId": "gid://shopify/ProductVariant/40827978645562",
+      "sku": "1027309002",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-03",
+      "variantId": "gid://shopify/ProductVariant/40851156992058",
+      "sku": "1002927044",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-03",
+      "variantId": "gid://shopify/ProductVariant/40891772076090",
+      "sku": "KCM1-L-121",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-03",
+      "variantId": "gid://shopify/ProductVariant/40891772436538",
+      "sku": "KCM1-M-2021",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-03",
+      "variantId": "gid://shopify/ProductVariant/40899995893818",
+      "sku": "IT06930005",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-03",
+      "variantId": "gid://shopify/ProductVariant/40900001824826",
+      "sku": "IT00776005",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-03",
+      "variantId": "gid://shopify/ProductVariant/40988508848186",
+      "sku": "SPR504",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-03",
+      "variantId": "gid://shopify/ProductVariant/41064594079802",
+      "sku": "sku-48323200385300",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-03",
+      "variantId": "gid://shopify/ProductVariant/41223302086714",
+      "sku": "IT08289005",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-03",
+      "variantId": "gid://shopify/ProductVariant/41272698765370",
+      "sku": "1029724002",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-03",
+      "variantId": "gid://shopify/ProductVariant/41272698798138",
+      "sku": "1029724003",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-03",
+      "variantId": "gid://shopify/ProductVariant/41274439204922",
+      "sku": "WINTER405",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-03",
+      "variantId": "gid://shopify/ProductVariant/41433943343162",
+      "sku": "IT08824013",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-03",
+      "variantId": "gid://shopify/ProductVariant/41433946619962",
+      "sku": "IT08821018",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-03",
+      "variantId": "gid://shopify/ProductVariant/41433953828922",
+      "sku": "IT08832018",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-04",
+      "variantId": "gid://shopify/ProductVariant/29060155834413",
+      "sku": "20500006",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-04",
+      "variantId": "gid://shopify/ProductVariant/29229166755885",
+      "sku": "82193605",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-04",
+      "variantId": "gid://shopify/ProductVariant/39437628014650",
+      "sku": "20500007",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-04",
+      "variantId": "gid://shopify/ProductVariant/39484407185466",
+      "sku": "EQB-820",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-04",
+      "variantId": "gid://shopify/ProductVariant/39484412788794",
+      "sku": "024BLK",
+      "netItemsSold": 7
+    },
+    {
+      "day": "2026-07-04",
+      "variantId": "gid://shopify/ProductVariant/40116242710586",
+      "sku": "20370003",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-04",
+      "variantId": "gid://shopify/ProductVariant/40140549914682",
+      "sku": "20339002",
+      "netItemsSold": 3
+    },
+    {
+      "day": "2026-07-04",
+      "variantId": "gid://shopify/ProductVariant/40140550176826",
+      "sku": "22149060",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-04",
+      "variantId": "gid://shopify/ProductVariant/40140552110138",
+      "sku": "20229003",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-04",
+      "variantId": "gid://shopify/ProductVariant/40513696497722",
+      "sku": "20620002",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-04",
+      "variantId": "gid://shopify/ProductVariant/40514422046778",
+      "sku": "21880060",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-04",
+      "variantId": "gid://shopify/ProductVariant/40561510547514",
+      "sku": "sku-41965734559997",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-04",
+      "variantId": "gid://shopify/ProductVariant/40726500900922",
+      "sku": "88-497-0-0",
+      "netItemsSold": 3
+    },
+    {
+      "day": "2026-07-04",
+      "variantId": "gid://shopify/ProductVariant/40833115750458",
+      "sku": "sku-52973475135779",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-04",
+      "variantId": "gid://shopify/ProductVariant/40899365077050",
+      "sku": "Valeria-BR24",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-04",
+      "variantId": "gid://shopify/ProductVariant/40899700654138",
+      "sku": "43260502",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-04",
+      "variantId": "gid://shopify/ProductVariant/40899700686906",
+      "sku": "43260503",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-04",
+      "variantId": "gid://shopify/ProductVariant/40899700719674",
+      "sku": "43260504",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-04",
+      "variantId": "gid://shopify/ProductVariant/40899717824570",
+      "sku": "43250504",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-04",
+      "variantId": "gid://shopify/ProductVariant/40901449351226",
+      "sku": "KSG500",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-04",
+      "variantId": "gid://shopify/ProductVariant/41274439204922",
+      "sku": "WINTER405",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-05",
+      "variantId": "gid://shopify/ProductVariant/29060112089133",
+      "sku": "053-90371",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-05",
+      "variantId": "gid://shopify/ProductVariant/32244957052986",
+      "sku": "23470003",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-05",
+      "variantId": "gid://shopify/ProductVariant/39382553526330",
+      "sku": "815077",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-05",
+      "variantId": "gid://shopify/ProductVariant/39437584564282",
+      "sku": "764782001906",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-05",
+      "variantId": "gid://shopify/ProductVariant/39437599834170",
+      "sku": "18184-2",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-05",
+      "variantId": "gid://shopify/ProductVariant/39437634371642",
+      "sku": "100508298",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-05",
+      "variantId": "gid://shopify/ProductVariant/39495981498426",
+      "sku": "KCM421-L-121",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-05",
+      "variantId": "gid://shopify/ProductVariant/40140549849146",
+      "sku": "20339000",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-05",
+      "variantId": "gid://shopify/ProductVariant/40140549881914",
+      "sku": "20339001",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-05",
+      "variantId": "gid://shopify/ProductVariant/40140549947450",
+      "sku": "20339003",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-05",
+      "variantId": "gid://shopify/ProductVariant/40153717276730",
+      "sku": "20334803",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-05",
+      "variantId": "gid://shopify/ProductVariant/40341117861946",
+      "sku": "DMSOROLLON",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-05",
+      "variantId": "gid://shopify/ProductVariant/40463747711034",
+      "sku": "EFR364",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-05",
+      "variantId": "gid://shopify/ProductVariant/40463763275834",
+      "sku": "EFC109",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-05",
+      "variantId": "gid://shopify/ProductVariant/40513696497722",
+      "sku": "20620002",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-05",
+      "variantId": "gid://shopify/ProductVariant/40529089757242",
+      "sku": "255159",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-05",
+      "variantId": "gid://shopify/ProductVariant/40538619314234",
+      "sku": "64ca5d7dab03e",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-05",
+      "variantId": "gid://shopify/ProductVariant/40786072698938",
+      "sku": "8881516937",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-05",
+      "variantId": "gid://shopify/ProductVariant/40798158225466",
+      "sku": "KEBCA500",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-05",
+      "variantId": "gid://shopify/ProductVariant/40899700621370",
+      "sku": "43260501",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-05",
+      "variantId": "gid://shopify/ProductVariant/40899995435066",
+      "sku": "IT06929066",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-05",
+      "variantId": "gid://shopify/ProductVariant/41042639093818",
+      "sku": "bell1",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-06",
+      "variantId": "gid://shopify/ProductVariant/31359437045818",
+      "sku": "15497-1",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-06",
+      "variantId": "gid://shopify/ProductVariant/31377706745914",
+      "sku": "3121 XXL-TB",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-06",
+      "variantId": "gid://shopify/ProductVariant/39437645479994",
+      "sku": "11815-2",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-06",
+      "variantId": "gid://shopify/ProductVariant/39458800533562",
+      "sku": "7011-NAT-BAP-86-1",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-06",
+      "variantId": "gid://shopify/ProductVariant/40140550144058",
+      "sku": "22149055",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-06",
+      "variantId": "gid://shopify/ProductVariant/40140551946298",
+      "sku": "22139055",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-06",
+      "variantId": "gid://shopify/ProductVariant/40153717080122",
+      "sku": "20334801",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-06",
+      "variantId": "gid://shopify/ProductVariant/40153717112890",
+      "sku": "20336802",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-06",
+      "variantId": "gid://shopify/ProductVariant/40758256369722",
+      "sku": "StallMat-5x10BagBK",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-06",
+      "variantId": "gid://shopify/ProductVariant/40765411295290",
+      "sku": "BH10020004",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-06",
+      "variantId": "gid://shopify/ProductVariant/40798168645690",
+      "sku": "KSFB22019",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-06",
+      "variantId": "gid://shopify/ProductVariant/40895439634490",
+      "sku": "42468-02-SJ",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-06",
+      "variantId": "gid://shopify/ProductVariant/41042637848634",
+      "sku": "sku-45065731473564",
+      "netItemsSold": -1
+    },
+    {
+      "day": "2026-07-06",
+      "variantId": "gid://shopify/ProductVariant/41042638241850",
+      "sku": "sku-44952397185180",
+      "netItemsSold": -1
+    },
+    {
+      "day": "2026-07-06",
+      "variantId": "gid://shopify/ProductVariant/41108742209594",
+      "sku": "SPMBE35",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-06",
+      "variantId": "gid://shopify/ProductVariant/41154489647162",
+      "sku": "ATLETIX60",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-06",
+      "variantId": "gid://shopify/ProductVariant/41223312474170",
+      "sku": "IT08284066",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-06",
+      "variantId": "gid://shopify/ProductVariant/41225707978810",
+      "sku": "IT09067005",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-06",
+      "variantId": "gid://shopify/ProductVariant/41267970670650",
+      "sku": "SME001",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-06",
+      "variantId": "gid://shopify/ProductVariant/41267978797114",
+      "sku": "StallMat-T125GY",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-06",
+      "variantId": "gid://shopify/ProductVariant/41274439204922",
+      "sku": "WINTER405",
+      "netItemsSold": 3
+    },
+    {
+      "day": "2026-07-06",
+      "variantId": "gid://shopify/ProductVariant/41307090812986",
+      "sku": "E33015-K000-28",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-06",
+      "variantId": "gid://shopify/ProductVariant/41391440035898",
+      "sku": "P8WHITE6",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-07",
+      "variantId": "gid://shopify/ProductVariant/29060121853997",
+      "sku": "KFB200L181",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-07",
+      "variantId": "gid://shopify/ProductVariant/29060163633197",
+      "sku": "429267",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-07",
+      "variantId": "gid://shopify/ProductVariant/29229208567853",
+      "sku": "126652",
+      "netItemsSold": 3
+    },
+    {
+      "day": "2026-07-07",
+      "variantId": "gid://shopify/ProductVariant/29609104474157",
+      "sku": "801464",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-07",
+      "variantId": "gid://shopify/ProductVariant/31803324006458",
+      "sku": "11-4151",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-07",
+      "variantId": "gid://shopify/ProductVariant/39360650707002",
+      "sku": "850032849180",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-07",
+      "variantId": "gid://shopify/ProductVariant/39534538293306",
+      "sku": "78919-026",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-07",
+      "variantId": "gid://shopify/ProductVariant/40106522705978",
+      "sku": "LC053",
+      "netItemsSold": 5
+    },
+    {
+      "day": "2026-07-07",
+      "variantId": "gid://shopify/ProductVariant/40140552077370",
+      "sku": "20229002",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-07",
+      "variantId": "gid://shopify/ProductVariant/40456760262714",
+      "sku": "F03018-002",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-07",
+      "variantId": "gid://shopify/ProductVariant/40475481374778",
+      "sku": "42010303",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-07",
+      "variantId": "gid://shopify/ProductVariant/40538616561722",
+      "sku": "sku-47757021348131",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-07",
+      "variantId": "gid://shopify/ProductVariant/40538616725562",
+      "sku": "sku-47757021413667",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-07",
+      "variantId": "gid://shopify/ProductVariant/40726500900922",
+      "sku": "88-497-0-0",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-07",
+      "variantId": "gid://shopify/ProductVariant/40827978612794",
+      "sku": "1027309001",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-07",
+      "variantId": "gid://shopify/ProductVariant/40899700686906",
+      "sku": "43260503",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-07",
+      "variantId": "gid://shopify/ProductVariant/40899717759034",
+      "sku": "43250502",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-07",
+      "variantId": "gid://shopify/ProductVariant/40988508848186",
+      "sku": "SPR504",
+      "netItemsSold": 20
+    },
+    {
+      "day": "2026-07-07",
+      "variantId": "gid://shopify/ProductVariant/41066432069690",
+      "sku": "sku-39856971153472",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-07",
+      "variantId": "gid://shopify/ProductVariant/41154489647162",
+      "sku": "ATLETIX60",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-07",
+      "variantId": "gid://shopify/ProductVariant/41267970670650",
+      "sku": "SME001",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-07",
+      "variantId": "gid://shopify/ProductVariant/41272699387962",
+      "sku": "1029730002",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-07",
+      "variantId": "gid://shopify/ProductVariant/41273457475642",
+      "sku": "DMRF60-IJD0-HO",
+      "netItemsSold": 10
+    },
+    {
+      "day": "2026-07-07",
+      "variantId": "gid://shopify/ProductVariant/41273468026938",
+      "sku": "DBHF22-IJI0-PY",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-08",
+      "variantId": "gid://shopify/ProductVariant/29060102357037",
+      "sku": "410PK",
+      "netItemsSold": 0
+    },
+    {
+      "day": "2026-07-08",
+      "variantId": "gid://shopify/ProductVariant/29060117364781",
+      "sku": "54-906-2-0",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-08",
+      "variantId": "gid://shopify/ProductVariant/39833269076026",
+      "sku": "FALL405",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-08",
+      "variantId": "gid://shopify/ProductVariant/40066083094586",
+      "sku": "10000499",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-08",
+      "variantId": "gid://shopify/ProductVariant/40124204974138",
+      "sku": "SAFT-2-DarkGreen",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-08",
+      "variantId": "gid://shopify/ProductVariant/40128200441914",
+      "sku": "FALL507",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-08",
+      "variantId": "gid://shopify/ProductVariant/40128206995514",
+      "sku": "FALL508",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-08",
+      "variantId": "gid://shopify/ProductVariant/40309205401658",
+      "sku": "WINTER503",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-08",
+      "variantId": "gid://shopify/ProductVariant/40762900086842",
+      "sku": "8881560141",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-08",
+      "variantId": "gid://shopify/ProductVariant/40800222347322",
+      "sku": "WINTER602",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-08",
+      "variantId": "gid://shopify/ProductVariant/41042638438458",
+      "sku": "CRYOLF",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-08",
+      "variantId": "gid://shopify/ProductVariant/41066431709242",
+      "sku": "sku-39784670330944",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-08",
+      "variantId": "gid://shopify/ProductVariant/41263367389242",
+      "sku": "1029538007",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-08",
+      "variantId": "gid://shopify/ProductVariant/41273468026938",
+      "sku": "DBHF22-IJI0-PY",
+      "netItemsSold": -2
+    },
+    {
+      "day": "2026-07-08",
+      "variantId": "gid://shopify/ProductVariant/41321327919162",
+      "sku": "MSS",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-08",
+      "variantId": "gid://shopify/ProductVariant/41335553589306",
+      "sku": "MCV09365",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-09",
+      "variantId": "gid://shopify/ProductVariant/29227907612717",
+      "sku": "44266 112 55",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-09",
+      "variantId": "gid://shopify/ProductVariant/39301379555386",
+      "sku": "11-4193-M3",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-09",
+      "variantId": "gid://shopify/ProductVariant/39437625425978",
+      "sku": "90452",
+      "netItemsSold": 3
+    },
+    {
+      "day": "2026-07-09",
+      "variantId": "gid://shopify/ProductVariant/40320101318714",
+      "sku": "8881501400",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-09",
+      "variantId": "gid://shopify/ProductVariant/40429588611130",
+      "sku": "AFAR90-IBWT-72",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-09",
+      "variantId": "gid://shopify/ProductVariant/40577222967354",
+      "sku": "CCSS19",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-09",
+      "variantId": "gid://shopify/ProductVariant/40798202298426",
+      "sku": "KCM123-M-500",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-09",
+      "variantId": "gid://shopify/ProductVariant/40939171872826",
+      "sku": "32001",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-09",
+      "variantId": "gid://shopify/ProductVariant/40965400887354",
+      "sku": "ADRF22-BJI0-69",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-09",
+      "variantId": "gid://shopify/ProductVariant/40966443073594",
+      "sku": "ACRN24-BJI0-72",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-09",
+      "variantId": "gid://shopify/ProductVariant/40988508848186",
+      "sku": "SPR504",
+      "netItemsSold": 12
+    },
+    {
+      "day": "2026-07-09",
+      "variantId": "gid://shopify/ProductVariant/41262743388218",
+      "sku": "IT00816006",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-09",
+      "variantId": "gid://shopify/ProductVariant/41267970670650",
+      "sku": "SME001",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-09",
+      "variantId": "gid://shopify/ProductVariant/41272699420730",
+      "sku": "1029730003",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-09",
+      "variantId": "gid://shopify/ProductVariant/41360870834234",
+      "sku": "Ken-2.0-LS-ML-ice",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-09",
+      "variantId": "gid://shopify/ProductVariant/41433933283386",
+      "sku": "IT09156013",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-09",
+      "variantId": "gid://shopify/ProductVariant/41433953959994",
+      "sku": "IT08833013",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/29060102357037",
+      "sku": "410PK",
+      "netItemsSold": -1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/29060117364781",
+      "sku": "54-906-2-0",
+      "netItemsSold": -1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/29227826872365",
+      "sku": "TIGER-1010",
+      "netItemsSold": 3
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/29229189857325",
+      "sku": "13477-1",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/31359464144954",
+      "sku": "011-1001001",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/31705385664570",
+      "sku": "316-1",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/31751230128186",
+      "sku": "SB-EBT-4",
+      "netItemsSold": -1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/32035656335418",
+      "sku": "1089",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/32226423341114",
+      "sku": "851393005017",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/32246541779002",
+      "sku": "SBND-BLK",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/39437624213562",
+      "sku": "CR-80",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/39437632864314",
+      "sku": "11468-3",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/39437634371642",
+      "sku": "100508298",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/39437636567098",
+      "sku": "13017-2",
+      "netItemsSold": 6
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/39437649281082",
+      "sku": "2325",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/39477508866106",
+      "sku": "10265",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/40019255689274",
+      "sku": "11664-2",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/40116844232762",
+      "sku": "20640003",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/40538611941434",
+      "sku": "64ca5f8aced89",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/40538612105274",
+      "sku": "64ca5f8a0fe15",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/40538612269114",
+      "sku": "64ca5f8944c2a",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/40712752005178",
+      "sku": "803550",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/40726500900922",
+      "sku": "88-497-0-0",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/40793198067770",
+      "sku": "15-3301208BK-8",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/40833115848762",
+      "sku": "sku-52973387809059",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/40899995893818",
+      "sku": "IT06930005",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/40950517530682",
+      "sku": "AAOAL0-KJI0-78",
+      "netItemsSold": -1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/40988508848186",
+      "sku": "SPR504",
+      "netItemsSold": 8
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/41064612560954",
+      "sku": "000001",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/41226533306426",
+      "sku": "",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/41262743257146",
+      "sku": "IT00816005",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/41272697978938",
+      "sku": "1029726001",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/41272698011706",
+      "sku": "1029726002",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/41272698044474",
+      "sku": "1029726003",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/41272698077242",
+      "sku": "1029726004",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/41272699355194",
+      "sku": "1029730001",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/41272699387962",
+      "sku": "1029730002",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/41272707055674",
+      "sku": "1029728003",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/41273457475642",
+      "sku": "DMRF60-IJD0-HO",
+      "netItemsSold": -10
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/41274439204922",
+      "sku": "WINTER405",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/41298499698746",
+      "sku": "sku-54848448921891",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/41298499731514",
+      "sku": "sku-54848448954659",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/41357833306170",
+      "sku": "",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/41388191055930",
+      "sku": "StallMat-T125BK",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-10",
+      "variantId": "gid://shopify/ProductVariant/41488613965882",
+      "sku": "1000000000778",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-11",
+      "variantId": "gid://shopify/ProductVariant/0",
+      "sku": "",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-11",
+      "variantId": "gid://shopify/ProductVariant/29060126769197",
+      "sku": "321326",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-11",
+      "variantId": "gid://shopify/ProductVariant/31359437045818",
+      "sku": "15497-1",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-11",
+      "variantId": "gid://shopify/ProductVariant/32226423373882",
+      "sku": "851393005024",
+      "netItemsSold": 3
+    },
+    {
+      "day": "2026-07-11",
+      "variantId": "gid://shopify/ProductVariant/39321772949562",
+      "sku": "2008",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-11",
+      "variantId": "gid://shopify/ProductVariant/39331334094906",
+      "sku": "68-7082-2-0",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-11",
+      "variantId": "gid://shopify/ProductVariant/39370170433594",
+      "sku": "52593",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-11",
+      "variantId": "gid://shopify/ProductVariant/40106522705978",
+      "sku": "LC053",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-11",
+      "variantId": "gid://shopify/ProductVariant/40429588643898",
+      "sku": "AFAR90-IBWT-75",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-11",
+      "variantId": "gid://shopify/ProductVariant/40529789747258",
+      "sku": "EEEHLB1UNIT",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-11",
+      "variantId": "gid://shopify/ProductVariant/40538616561722",
+      "sku": "sku-47757021348131",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-11",
+      "variantId": "gid://shopify/ProductVariant/40538616725562",
+      "sku": "sku-47757021413667",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-11",
+      "variantId": "gid://shopify/ProductVariant/40802390147130",
+      "sku": "088-11001",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-11",
+      "variantId": "gid://shopify/ProductVariant/40895577882682",
+      "sku": "1336",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-11",
+      "variantId": "gid://shopify/ProductVariant/40956438708282",
+      "sku": "sku-46900417200283",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-11",
+      "variantId": "gid://shopify/ProductVariant/40964760698938",
+      "sku": "IDBLK",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-11",
+      "variantId": "gid://shopify/ProductVariant/40988508848186",
+      "sku": "SPR504",
+      "netItemsSold": 4
+    },
+    {
+      "day": "2026-07-11",
+      "variantId": "gid://shopify/ProductVariant/41267970670650",
+      "sku": "SME001",
+      "netItemsSold": -1
+    },
+    {
+      "day": "2026-07-11",
+      "variantId": "gid://shopify/ProductVariant/41272699387962",
+      "sku": "1029730002",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-11",
+      "variantId": "gid://shopify/ProductVariant/41433953796154",
+      "sku": "IT08834017",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-12",
+      "variantId": "gid://shopify/ProductVariant/39320126292026",
+      "sku": "ABAM72-BI00-LA",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-12",
+      "variantId": "gid://shopify/ProductVariant/39320126324794",
+      "sku": "ABAM72-BI00-ME",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-12",
+      "variantId": "gid://shopify/ProductVariant/39437643939898",
+      "sku": "3002431",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-12",
+      "variantId": "gid://shopify/ProductVariant/39437647216698",
+      "sku": "427952",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-12",
+      "variantId": "gid://shopify/ProductVariant/39932460400698",
+      "sku": "AFRE10-VF00-XL",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-12",
+      "variantId": "gid://shopify/ProductVariant/40052642742330",
+      "sku": "SUM402",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-12",
+      "variantId": "gid://shopify/ProductVariant/40429588676666",
+      "sku": "AFAR90-IBWT-78",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-12",
+      "variantId": "gid://shopify/ProductVariant/40712752005178",
+      "sku": "803550",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-12",
+      "variantId": "gid://shopify/ProductVariant/40815663611962",
+      "sku": "DC-NY-S",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-12",
+      "variantId": "gid://shopify/ProductVariant/40988508848186",
+      "sku": "SPR504",
+      "netItemsSold": 16
+    },
+    {
+      "day": "2026-07-12",
+      "variantId": "gid://shopify/ProductVariant/41050583924794",
+      "sku": "A634AChestnutLG",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-12",
+      "variantId": "gid://shopify/ProductVariant/41154489647162",
+      "sku": "ATLETIX60",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-12",
+      "variantId": "gid://shopify/ProductVariant/41262743322682",
+      "sku": "IT00815006",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-12",
+      "variantId": "gid://shopify/ProductVariant/41272697978938",
+      "sku": "1029726001",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-12",
+      "variantId": "gid://shopify/ProductVariant/41272699387962",
+      "sku": "1029730002",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-12",
+      "variantId": "gid://shopify/ProductVariant/41272699453498",
+      "sku": "1029730004",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-12",
+      "variantId": "gid://shopify/ProductVariant/41272707022906",
+      "sku": "1029728002",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-12",
+      "variantId": "gid://shopify/ProductVariant/41272707055674",
+      "sku": "1029728003",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-12",
+      "variantId": "gid://shopify/ProductVariant/41274439204922",
+      "sku": "WINTER405",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-12",
+      "variantId": "gid://shopify/ProductVariant/41433947013178",
+      "sku": "IT08823018",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-13",
+      "variantId": "gid://shopify/ProductVariant/29060138172461",
+      "sku": "11-4170-4",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-13",
+      "variantId": "gid://shopify/ProductVariant/29229203324973",
+      "sku": "19903",
+      "netItemsSold": 6
+    },
+    {
+      "day": "2026-07-13",
+      "variantId": "gid://shopify/ProductVariant/39377300717626",
+      "sku": "21278832",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-13",
+      "variantId": "gid://shopify/ProductVariant/39437636108346",
+      "sku": "003-1111032",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-13",
+      "variantId": "gid://shopify/ProductVariant/39446909386810",
+      "sku": "110125",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-13",
+      "variantId": "gid://shopify/ProductVariant/40305489739834",
+      "sku": "sku-42755704848605",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-13",
+      "variantId": "gid://shopify/ProductVariant/40513603600442",
+      "sku": "VSP222BN",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-13",
+      "variantId": "gid://shopify/ProductVariant/40712752005178",
+      "sku": "803550",
+      "netItemsSold": -1
+    },
+    {
+      "day": "2026-07-13",
+      "variantId": "gid://shopify/ProductVariant/40735840534586",
+      "sku": "sku-51085713211683",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-13",
+      "variantId": "gid://shopify/ProductVariant/40735840698426",
+      "sku": "sku-51085713375523",
+      "netItemsSold": -1
+    },
+    {
+      "day": "2026-07-13",
+      "variantId": "gid://shopify/ProductVariant/40988508848186",
+      "sku": "SPR504",
+      "netItemsSold": 12
+    },
+    {
+      "day": "2026-07-13",
+      "variantId": "gid://shopify/ProductVariant/41072587538490",
+      "sku": "sku-31685372149865",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-13",
+      "variantId": "gid://shopify/ProductVariant/41072587571258",
+      "sku": "sku-32504036130921",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-13",
+      "variantId": "gid://shopify/ProductVariant/41272698765370",
+      "sku": "1029724002",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-13",
+      "variantId": "gid://shopify/ProductVariant/41272699387962",
+      "sku": "1029730002",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-13",
+      "variantId": "gid://shopify/ProductVariant/41272699453498",
+      "sku": "1029730004",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-13",
+      "variantId": "gid://shopify/ProductVariant/41272707022906",
+      "sku": "1029728002",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-13",
+      "variantId": "gid://shopify/ProductVariant/41272707055674",
+      "sku": "1029728003",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-13",
+      "variantId": "gid://shopify/ProductVariant/41274439204922",
+      "sku": "WINTER405",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-13",
+      "variantId": "gid://shopify/ProductVariant/41388191055930",
+      "sku": "StallMat-T125BK",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-14",
+      "variantId": "gid://shopify/ProductVariant/29951088394285",
+      "sku": "100520214",
+      "netItemsSold": 10
+    },
+    {
+      "day": "2026-07-14",
+      "variantId": "gid://shopify/ProductVariant/31321779798074",
+      "sku": "68-900-6-0",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-14",
+      "variantId": "gid://shopify/ProductVariant/31628610142266",
+      "sku": "1002927040",
+      "netItemsSold": -1
+    },
+    {
+      "day": "2026-07-14",
+      "variantId": "gid://shopify/ProductVariant/32035656368186",
+      "sku": "GUMMY-1014",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-14",
+      "variantId": "gid://shopify/ProductVariant/39424654573626",
+      "sku": "CORRO-SOCKS-S",
+      "netItemsSold": -1
+    },
+    {
+      "day": "2026-07-14",
+      "variantId": "gid://shopify/ProductVariant/39437589381178",
+      "sku": "ADSA90-BR00-72",
+      "netItemsSold": -2
+    },
+    {
+      "day": "2026-07-14",
+      "variantId": "gid://shopify/ProductVariant/39437601177658",
+      "sku": "19718-2",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-14",
+      "variantId": "gid://shopify/ProductVariant/39437622575162",
+      "sku": "17231-3",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-14",
+      "variantId": "gid://shopify/ProductVariant/39437634371642",
+      "sku": "100508298",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-14",
+      "variantId": "gid://shopify/ProductVariant/40140549980218",
+      "sku": "20339004",
+      "netItemsSold": -1
+    },
+    {
+      "day": "2026-07-14",
+      "variantId": "gid://shopify/ProductVariant/40140550144058",
+      "sku": "22149055",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-14",
+      "variantId": "gid://shopify/ProductVariant/40140551946298",
+      "sku": "22139055",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-14",
+      "variantId": "gid://shopify/ProductVariant/40453308710970",
+      "sku": "52-2036-9-0",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-14",
+      "variantId": "gid://shopify/ProductVariant/40477474259002",
+      "sku": "100502019",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-14",
+      "variantId": "gid://shopify/ProductVariant/40538616692794",
+      "sku": "sku-47757021315363",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-14",
+      "variantId": "gid://shopify/ProductVariant/40619515805754",
+      "sku": "sku-49540107206947",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-14",
+      "variantId": "gid://shopify/ProductVariant/40778859642938",
+      "sku": "WINTER601",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-14",
+      "variantId": "gid://shopify/ProductVariant/40893989519418",
+      "sku": "42663-01-F",
+      "netItemsSold": -1
+    },
+    {
+      "day": "2026-07-14",
+      "variantId": "gid://shopify/ProductVariant/40899824681018",
+      "sku": "287HA",
+      "netItemsSold": -1
+    },
+    {
+      "day": "2026-07-14",
+      "variantId": "gid://shopify/ProductVariant/40959346114618",
+      "sku": "IT07160018",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-14",
+      "variantId": "gid://shopify/ProductVariant/40960523731002",
+      "sku": "IT07199017",
+      "netItemsSold": -1
+    },
+    {
+      "day": "2026-07-14",
+      "variantId": "gid://shopify/ProductVariant/40988508848186",
+      "sku": "SPR504",
+      "netItemsSold": 42
+    },
+    {
+      "day": "2026-07-14",
+      "variantId": "gid://shopify/ProductVariant/41267970670650",
+      "sku": "SME001",
+      "netItemsSold": -1
+    },
+    {
+      "day": "2026-07-14",
+      "variantId": "gid://shopify/ProductVariant/41272697978938",
+      "sku": "1029726001",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-14",
+      "variantId": "gid://shopify/ProductVariant/41272698011706",
+      "sku": "1029726002",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-14",
+      "variantId": "gid://shopify/ProductVariant/41272698044474",
+      "sku": "1029726003",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-14",
+      "variantId": "gid://shopify/ProductVariant/41272698798138",
+      "sku": "1029724003",
+      "netItemsSold": 3
+    },
+    {
+      "day": "2026-07-14",
+      "variantId": "gid://shopify/ProductVariant/41272699420730",
+      "sku": "1029730003",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-14",
+      "variantId": "gid://shopify/ProductVariant/41272699453498",
+      "sku": "1029730004",
+      "netItemsSold": 3
+    },
+    {
+      "day": "2026-07-14",
+      "variantId": "gid://shopify/ProductVariant/41272707022906",
+      "sku": "1029728002",
+      "netItemsSold": 3
+    },
+    {
+      "day": "2026-07-14",
+      "variantId": "gid://shopify/ProductVariant/41272707055674",
+      "sku": "1029728003",
+      "netItemsSold": 5
+    },
+    {
+      "day": "2026-07-14",
+      "variantId": "gid://shopify/ProductVariant/41384574222394",
+      "sku": "68-907-11-0",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-15",
+      "variantId": "gid://shopify/ProductVariant/29060112089133",
+      "sku": "053-90371",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-15",
+      "variantId": "gid://shopify/ProductVariant/29229167771693",
+      "sku": "013-4000",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-15",
+      "variantId": "gid://shopify/ProductVariant/29229189660717",
+      "sku": "KHG 1000",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-15",
+      "variantId": "gid://shopify/ProductVariant/29229189857325",
+      "sku": "13477-1",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-15",
+      "variantId": "gid://shopify/ProductVariant/29229202833453",
+      "sku": "100506701",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-15",
+      "variantId": "gid://shopify/ProductVariant/29229205848109",
+      "sku": "1003",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-15",
+      "variantId": "gid://shopify/ProductVariant/29866269409325",
+      "sku": "17230-1",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-15",
+      "variantId": "gid://shopify/ProductVariant/31359437045818",
+      "sku": "15497-1",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-15",
+      "variantId": "gid://shopify/ProductVariant/39253400748090",
+      "sku": "100520149",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-15",
+      "variantId": "gid://shopify/ProductVariant/39277355532346",
+      "sku": "804957",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-15",
+      "variantId": "gid://shopify/ProductVariant/39340458934330",
+      "sku": "SP-SINGLE",
+      "netItemsSold": 4
+    },
+    {
+      "day": "2026-07-15",
+      "variantId": "gid://shopify/ProductVariant/39378234015802",
+      "sku": "16614-1",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-15",
+      "variantId": "gid://shopify/ProductVariant/39382553526330",
+      "sku": "815077",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-15",
+      "variantId": "gid://shopify/ProductVariant/39437583319098",
+      "sku": "",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-15",
+      "variantId": "gid://shopify/ProductVariant/39437639090234",
+      "sku": "13670-2",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-15",
+      "variantId": "gid://shopify/ProductVariant/39569340825658",
+      "sku": "14794",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-15",
+      "variantId": "gid://shopify/ProductVariant/40052426801210",
+      "sku": "WINTER403",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-15",
+      "variantId": "gid://shopify/ProductVariant/40106522705978",
+      "sku": "LC053",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-15",
+      "variantId": "gid://shopify/ProductVariant/40146149965882",
+      "sku": "147-M-BLK",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-15",
+      "variantId": "gid://shopify/ProductVariant/40242281381946",
+      "sku": "5-CLOSED-BLACK-80",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-15",
+      "variantId": "gid://shopify/ProductVariant/40258829484090",
+      "sku": "8440 T",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-15",
+      "variantId": "gid://shopify/ProductVariant/40529789747258",
+      "sku": "EEEHLB1UNIT",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-15",
+      "variantId": "gid://shopify/ProductVariant/40594110021690",
+      "sku": "90.195.900100000",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-15",
+      "variantId": "gid://shopify/ProductVariant/40762900086842",
+      "sku": "8881560141",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-15",
+      "variantId": "gid://shopify/ProductVariant/40988508848186",
+      "sku": "SPR504",
+      "netItemsSold": 12
+    },
+    {
+      "day": "2026-07-15",
+      "variantId": "gid://shopify/ProductVariant/41186079375418",
+      "sku": "MUDF6.7",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-15",
+      "variantId": "gid://shopify/ProductVariant/41264950411322",
+      "sku": "1029540015",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-15",
+      "variantId": "gid://shopify/ProductVariant/41272698798138",
+      "sku": "1029724003",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-15",
+      "variantId": "gid://shopify/ProductVariant/41272699387962",
+      "sku": "1029730002",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-15",
+      "variantId": "gid://shopify/ProductVariant/41272699420730",
+      "sku": "1029730003",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-15",
+      "variantId": "gid://shopify/ProductVariant/41272707022906",
+      "sku": "1029728002",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-15",
+      "variantId": "gid://shopify/ProductVariant/41272707153978",
+      "sku": "1029728010",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/29060137713709",
+      "sku": "450150",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/29227826872365",
+      "sku": "TIGER-1010",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/29229196607533",
+      "sku": "091-10445",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/29607637155885",
+      "sku": "RAM-04S",
+      "netItemsSold": 10
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/32035656335418",
+      "sku": "1089",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/32246541779002",
+      "sku": "SBND-BLK",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/39253400780858",
+      "sku": "BLIC6US",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/39275013799994",
+      "sku": "HST-1",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/39321775505466",
+      "sku": "11017-1",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/39437611565114",
+      "sku": "16906-3",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/39437625524282",
+      "sku": "80192",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/39480003690554",
+      "sku": "CC025",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/39488861601850",
+      "sku": "707129259479",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/40054702702650",
+      "sku": "90165",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/40128206995514",
+      "sku": "FALL508",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/40266137174074",
+      "sku": "1096",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/40318276862010",
+      "sku": "GRANBALLAP",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/40477474259002",
+      "sku": "100502019",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/40529789747258",
+      "sku": "EEEHLB1UNIT",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/40793197936698",
+      "sku": "15-3301208BK-6",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/40802390179898",
+      "sku": "088-11028",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/40802398339130",
+      "sku": "GRANBALLNAUS",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/40893919035450",
+      "sku": "42705-01-41/46",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/40988508848186",
+      "sku": "SPR504",
+      "netItemsSold": 6
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/41050597589050",
+      "sku": "A635MintMED",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/41118546067514",
+      "sku": "CNV-040",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/41267970670650",
+      "sku": "SME001",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/41272698798138",
+      "sku": "1029724003",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/41272699420730",
+      "sku": "1029730003",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/41273501483066",
+      "sku": "6596d5cab0b72-FEI",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/41273501548602",
+      "sku": "6596d5c76b53d-FEI",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/41296700801082",
+      "sku": "CORRO-6596d5cd7cd3e",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/41312934068282",
+      "sku": "1000000001434",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/41321317105722",
+      "sku": "1000000001349",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-16",
+      "variantId": "gid://shopify/ProductVariant/41357968834618",
+      "sku": "C-691037928002",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/29060060905517",
+      "sku": "3540BK-018",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/29229183238189",
+      "sku": "82696306",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/31248962617402",
+      "sku": "LH01US10",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/31321779667002",
+      "sku": "",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/31359464144954",
+      "sku": "011-1001001",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/31525304303674",
+      "sku": "50-1000-2-0",
+      "netItemsSold": 3
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/32226423373882",
+      "sku": "851393005024",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/32245908602938",
+      "sku": "AE006",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/39253400780858",
+      "sku": "BLIC6US",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/39372054331450",
+      "sku": "17183-1",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/39437611106362",
+      "sku": "MAH5",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/39437625262138",
+      "sku": "001WIPEG",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/39437632503866",
+      "sku": "428940",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/39526764380218",
+      "sku": "RT485M",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/40019237470266",
+      "sku": "18911-4",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/40108512739386",
+      "sku": "82194676-SINGLE",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/40140549914682",
+      "sku": "20339002",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/40140549947450",
+      "sku": "20339003",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/40203250827322",
+      "sku": "42513-05-COB",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/40538616201274",
+      "sku": "6596d5ca300ea",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/40538616692794",
+      "sku": "sku-47757021315363",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/40538616856634",
+      "sku": "6596d5ce0b756",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/40594110021690",
+      "sku": "90.195.900100000",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/40741879087162",
+      "sku": "88295-01-01-M",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/40762723926074",
+      "sku": "BH20050010",
+      "netItemsSold": 3
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/40763791114298",
+      "sku": "BH20050006",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/40793197969466",
+      "sku": "15-3301208BK-65",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/40802388213818",
+      "sku": "GRANMIX8US",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/40894053351482",
+      "sku": "42609-33-C",
+      "netItemsSold": 0
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/40959355322426",
+      "sku": "IT07485004",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/40988508848186",
+      "sku": "SPR504",
+      "netItemsSold": 12
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/41223314866234",
+      "sku": "IT08283004",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/41272697978938",
+      "sku": "1029726001",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/41272698011706",
+      "sku": "1029726002",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/41272699387962",
+      "sku": "1029730002",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/41272699420730",
+      "sku": "1029730003",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/41272707022906",
+      "sku": "1029728002",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/41273501515834",
+      "sku": "6596d5c923cd8-FEI",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/41273501614138",
+      "sku": "6596d5ce0b757-FEI",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/41273520914490",
+      "sku": "sku-53634206990627-FEI",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/41274439204922",
+      "sku": "WINTER405",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/41296700473402",
+      "sku": "CORRO-47757021217059",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/41296701030458",
+      "sku": "CORRO-51085713211683",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/41296701358138",
+      "sku": "CORRO-6596d5ce0b758",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-17",
+      "variantId": "gid://shopify/ProductVariant/41296702275642",
+      "sku": "CORRO-6596d5c6d5952",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/29060047568941",
+      "sku": "2005",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/29060102357037",
+      "sku": "410PK",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/29229206732845",
+      "sku": "82696304",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/31338096525370",
+      "sku": "430450",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/31359464144954",
+      "sku": "011-1001001",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/31925668839482",
+      "sku": "TEOS",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/39275013799994",
+      "sku": "HST-1",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/39275014520890",
+      "sku": "12319-1",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/39321772949562",
+      "sku": "2008",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/39321773637690",
+      "sku": "21234",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/39423379046458",
+      "sku": "10238-JM",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/39437599834170",
+      "sku": "18184-2",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/39437601177658",
+      "sku": "19718-2",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/39437622575162",
+      "sku": "17231-3",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/39437622640698",
+      "sku": "30128",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/39437632340026",
+      "sku": "16824-2",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/39449826230330",
+      "sku": "HWB-001",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/39495981760570",
+      "sku": "KCM421-XL-2017",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/40058548584506",
+      "sku": "WINTER402",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/40116844232762",
+      "sku": "20640003",
+      "netItemsSold": -1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/40141881180218",
+      "sku": "USKDAJ-BR-C",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/40141881311290",
+      "sku": "US07H-BR-C",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/40141881573434",
+      "sku": "US05RBRC",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/40513592754234",
+      "sku": "VSP12001BN",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/40529789747258",
+      "sku": "EEEHLB1UNIT",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/40762900086842",
+      "sku": "8881560141",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/40765410541626",
+      "sku": "BH10030002",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/40793198166074",
+      "sku": "15-3301208BK-95",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/40802390147130",
+      "sku": "088-11001",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/40802398339130",
+      "sku": "GRANBALLNAUS",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/40862925586490",
+      "sku": "HR-72176-9.5",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/40893919002682",
+      "sku": "42705-01-35/40",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/40899356655674",
+      "sku": "ANDREA-BK22",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/40988508848186",
+      "sku": "SPR504",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/41066427875386",
+      "sku": "852207671541",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/41066430529594",
+      "sku": "853210706039",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/41272698011706",
+      "sku": "1029726002",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/41273501515834",
+      "sku": "6596d5c923cd8-FEI",
+      "netItemsSold": -1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/41273501745210",
+      "sku": "sku-53634206466339-FEI",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/41274439204922",
+      "sku": "WINTER405",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/41296700538938",
+      "sku": "CORRO-51085713146147",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/41296700604474",
+      "sku": "CORRO-51085713113379",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/41296700637242",
+      "sku": "CORRO-49540107141411",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/41296701521978",
+      "sku": "CORRO-51085713277219",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-18",
+      "variantId": "gid://shopify/ProductVariant/41363834404922",
+      "sku": "PB-QUITO-39",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-19",
+      "variantId": "gid://shopify/ProductVariant/31359437045818",
+      "sku": "15497-1",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-19",
+      "variantId": "gid://shopify/ProductVariant/31359464144954",
+      "sku": "011-1001001",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-19",
+      "variantId": "gid://shopify/ProductVariant/31837483532346",
+      "sku": "MAH3",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-19",
+      "variantId": "gid://shopify/ProductVariant/32245908602938",
+      "sku": "AE006",
+      "netItemsSold": -1
+    },
+    {
+      "day": "2026-07-19",
+      "variantId": "gid://shopify/ProductVariant/39257586794554",
+      "sku": "BNDBK",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-19",
+      "variantId": "gid://shopify/ProductVariant/39275014520890",
+      "sku": "12319-1",
+      "netItemsSold": 4
+    },
+    {
+      "day": "2026-07-19",
+      "variantId": "gid://shopify/ProductVariant/39321775505466",
+      "sku": "11017-1",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-19",
+      "variantId": "gid://shopify/ProductVariant/39437585809466",
+      "sku": "PROPASTE",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-19",
+      "variantId": "gid://shopify/ProductVariant/39437601210426",
+      "sku": "19718-3",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-19",
+      "variantId": "gid://shopify/ProductVariant/39437632340026",
+      "sku": "16824-2",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-19",
+      "variantId": "gid://shopify/ProductVariant/39437636567098",
+      "sku": "13017-2",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-19",
+      "variantId": "gid://shopify/ProductVariant/39488861536314",
+      "sku": "707129259448",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-19",
+      "variantId": "gid://shopify/ProductVariant/40267640602682",
+      "sku": "XCC-28",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-19",
+      "variantId": "gid://shopify/ProductVariant/40316058599482",
+      "sku": "sc-395749",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-19",
+      "variantId": "gid://shopify/ProductVariant/40318276862010",
+      "sku": "GRANBALLAP",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-19",
+      "variantId": "gid://shopify/ProductVariant/40538617020474",
+      "sku": "6596d5ce0b757",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-19",
+      "variantId": "gid://shopify/ProductVariant/40582116048954",
+      "sku": "sku-45594331349213",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-19",
+      "variantId": "gid://shopify/ProductVariant/40712752005178",
+      "sku": "803550",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-19",
+      "variantId": "gid://shopify/ProductVariant/40773294456890",
+      "sku": "1000000000374",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-19",
+      "variantId": "gid://shopify/ProductVariant/40892954542138",
+      "sku": "42421",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-19",
+      "variantId": "gid://shopify/ProductVariant/40893223567418",
+      "sku": "42511",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-19",
+      "variantId": "gid://shopify/ProductVariant/40893919068218",
+      "sku": "42705-03-35/40",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-19",
+      "variantId": "gid://shopify/ProductVariant/40893965598778",
+      "sku": "72119",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-19",
+      "variantId": "gid://shopify/ProductVariant/40927985139770",
+      "sku": "42422",
+      "netItemsSold": 3
+    },
+    {
+      "day": "2026-07-19",
+      "variantId": "gid://shopify/ProductVariant/41273501515834",
+      "sku": "6596d5c923cd8-FEI",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-19",
+      "variantId": "gid://shopify/ProductVariant/41296700604474",
+      "sku": "CORRO-51085713113379",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-19",
+      "variantId": "gid://shopify/ProductVariant/41312919519290",
+      "sku": "1000000001479",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-19",
+      "variantId": "gid://shopify/ProductVariant/41312919552058",
+      "sku": "1000000001183",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-19",
+      "variantId": "gid://shopify/ProductVariant/41357967917114",
+      "sku": "C-EEENSH032OZ",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-19",
+      "variantId": "gid://shopify/ProductVariant/41360700014650",
+      "sku": "82696409",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-19",
+      "variantId": "gid://shopify/ProductVariant/41360870735930",
+      "sku": "Ken-2.0-LS-XSS-candy",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-19",
+      "variantId": "gid://shopify/ProductVariant/41363834470458",
+      "sku": "PB-QUITO-41",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-20",
+      "variantId": "gid://shopify/ProductVariant/31467657658426",
+      "sku": "35-4043-BL",
+      "netItemsSold": 5
+    },
+    {
+      "day": "2026-07-20",
+      "variantId": "gid://shopify/ProductVariant/39257586892858",
+      "sku": "BNDWH",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-20",
+      "variantId": "gid://shopify/ProductVariant/39360650707002",
+      "sku": "850032849180",
+      "netItemsSold": 50
+    },
+    {
+      "day": "2026-07-20",
+      "variantId": "gid://shopify/ProductVariant/39437625425978",
+      "sku": "90452",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-20",
+      "variantId": "gid://shopify/ProductVariant/39437632995386",
+      "sku": "10220",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-20",
+      "variantId": "gid://shopify/ProductVariant/39437639909434",
+      "sku": "77125",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-20",
+      "variantId": "gid://shopify/ProductVariant/39437647151162",
+      "sku": "90111",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-20",
+      "variantId": "gid://shopify/ProductVariant/39437648134202",
+      "sku": "81120",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-20",
+      "variantId": "gid://shopify/ProductVariant/40266295705658",
+      "sku": "430854",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-20",
+      "variantId": "gid://shopify/ProductVariant/40475481374778",
+      "sku": "42010303",
+      "netItemsSold": 50
+    },
+    {
+      "day": "2026-07-20",
+      "variantId": "gid://shopify/ProductVariant/41274439204922",
+      "sku": "WINTER405",
+      "netItemsSold": 20
+    },
+    {
+      "day": "2026-07-21",
+      "variantId": "gid://shopify/ProductVariant/29060047568941",
+      "sku": "2005",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-21",
+      "variantId": "gid://shopify/ProductVariant/29060134076461",
+      "sku": "331063",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-21",
+      "variantId": "gid://shopify/ProductVariant/29227830738989",
+      "sku": "100543890",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-21",
+      "variantId": "gid://shopify/ProductVariant/29607575126061",
+      "sku": "N400-8-BLU",
+      "netItemsSold": 6
+    },
+    {
+      "day": "2026-07-21",
+      "variantId": "gid://shopify/ProductVariant/39275013799994",
+      "sku": "HST-1",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-21",
+      "variantId": "gid://shopify/ProductVariant/39372091195450",
+      "sku": "13446-3",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-21",
+      "variantId": "gid://shopify/ProductVariant/39437606289466",
+      "sku": "001-50128",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-21",
+      "variantId": "gid://shopify/ProductVariant/39437611597882",
+      "sku": "16906-4",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-21",
+      "variantId": "gid://shopify/ProductVariant/39437622607930",
+      "sku": "17230-2",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-21",
+      "variantId": "gid://shopify/ProductVariant/39446909386810",
+      "sku": "110125",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-21",
+      "variantId": "gid://shopify/ProductVariant/40045733019706",
+      "sku": "35-2100-S5",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-21",
+      "variantId": "gid://shopify/ProductVariant/40266295705658",
+      "sku": "430854",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-21",
+      "variantId": "gid://shopify/ProductVariant/40561516871738",
+      "sku": "sku-33042991906951",
+      "netItemsSold": 5
+    },
+    {
+      "day": "2026-07-21",
+      "variantId": "gid://shopify/ProductVariant/40680781283386",
+      "sku": "088-30055",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-21",
+      "variantId": "gid://shopify/ProductVariant/40892954542138",
+      "sku": "42421",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-21",
+      "variantId": "gid://shopify/ProductVariant/40893965598778",
+      "sku": "72119",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-21",
+      "variantId": "gid://shopify/ProductVariant/41221986287674",
+      "sku": "P8FBNAVY6",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-21",
+      "variantId": "gid://shopify/ProductVariant/41226459447354",
+      "sku": "",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-22",
+      "variantId": "gid://shopify/ProductVariant/29060121853997",
+      "sku": "KFB200L181",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-22",
+      "variantId": "gid://shopify/ProductVariant/39384008196154",
+      "sku": "WINTER411",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-22",
+      "variantId": "gid://shopify/ProductVariant/39437590003770",
+      "sku": "32602",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-22",
+      "variantId": "gid://shopify/ProductVariant/39437637943354",
+      "sku": "708852000352",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-22",
+      "variantId": "gid://shopify/ProductVariant/39437639057466",
+      "sku": "12416-3",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-22",
+      "variantId": "gid://shopify/ProductVariant/39484412657722",
+      "sku": "111475",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-22",
+      "variantId": "gid://shopify/ProductVariant/39488860782650",
+      "sku": "759687538305",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-22",
+      "variantId": "gid://shopify/ProductVariant/39942182142010",
+      "sku": "430870",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-22",
+      "variantId": "gid://shopify/ProductVariant/40019237371962",
+      "sku": "18911-1",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-22",
+      "variantId": "gid://shopify/ProductVariant/40019237470266",
+      "sku": "18911-4",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-22",
+      "variantId": "gid://shopify/ProductVariant/40128286752826",
+      "sku": "ELEMEQ-SKIN SAL SPRY-16",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-22",
+      "variantId": "gid://shopify/ProductVariant/40145575968826",
+      "sku": "52115-03-130",
+      "netItemsSold": -1
+    },
+    {
+      "day": "2026-07-22",
+      "variantId": "gid://shopify/ProductVariant/40444663267386",
+      "sku": "52-2089-0-0",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-22",
+      "variantId": "gid://shopify/ProductVariant/40456523808826",
+      "sku": "EC018-D04000-006",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-22",
+      "variantId": "gid://shopify/ProductVariant/40501543895098",
+      "sku": "GRANORX8US",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-22",
+      "variantId": "gid://shopify/ProductVariant/40735840567354",
+      "sku": "sku-51085713244451",
+      "netItemsSold": 0
+    },
+    {
+      "day": "2026-07-22",
+      "variantId": "gid://shopify/ProductVariant/40735840665658",
+      "sku": "sku-51085713342755",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-22",
+      "variantId": "gid://shopify/ProductVariant/40862925520954",
+      "sku": "HR-72176-8.5",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-22",
+      "variantId": "gid://shopify/ProductVariant/40892919218234",
+      "sku": "82139-05",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-22",
+      "variantId": "gid://shopify/ProductVariant/41042638438458",
+      "sku": "CRYOLF",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-22",
+      "variantId": "gid://shopify/ProductVariant/41171225870394",
+      "sku": "EC018-H00702-001-XS",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-22",
+      "variantId": "gid://shopify/ProductVariant/41267970670650",
+      "sku": "SME001",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-22",
+      "variantId": "gid://shopify/ProductVariant/41272271962170",
+      "sku": "B2MIUS",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-22",
+      "variantId": "gid://shopify/ProductVariant/41387337711674",
+      "sku": "1000000001260",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-22",
+      "variantId": "gid://shopify/ProductVariant/41433918242874",
+      "sku": "1000000001053",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/29229168230445",
+      "sku": "82696309",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/29229189857325",
+      "sku": "13477-1",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/29247883608109",
+      "sku": "428455",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/29607574994989",
+      "sku": "N400-8BX",
+      "netItemsSold": 3
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/29866269409325",
+      "sku": "17230-1",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/31248962617402",
+      "sku": "LH01US10",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/31352450121786",
+      "sku": "18471-1",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/31359437045818",
+      "sku": "15497-1",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/31837483532346",
+      "sku": "MAH3",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/32226423341114",
+      "sku": "851393005017",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/32226423373882",
+      "sku": "851393005024",
+      "netItemsSold": 3
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/39321774129210",
+      "sku": "32951BR46",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/39341461667898",
+      "sku": "68-24485-2-0",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/39437589217338",
+      "sku": "077-00345",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/39437601210426",
+      "sku": "19718-3",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/39437639090234",
+      "sku": "13670-2",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/39477934489658",
+      "sku": "44288 122 55",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/39484405350458",
+      "sku": "12602000",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/40011222450234",
+      "sku": "21297086",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/40019237371962",
+      "sku": "18911-1",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/40044530368570",
+      "sku": "21274981",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/40106522705978",
+      "sku": "LC053",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/40108512739386",
+      "sku": "82194676-SINGLE",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/40134292537402",
+      "sku": "12105501",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/40141881475130",
+      "sku": "DY05B-BR-F",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/40501543895098",
+      "sku": "GRANORX8US",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/40513701052474",
+      "sku": "20699003",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/40529789747258",
+      "sku": "EEEHLB1UNIT",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/40763799109690",
+      "sku": "BH20010001",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/40793197936698",
+      "sku": "15-3301208BK-6",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/40793198100538",
+      "sku": "15-3301208BK-85",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/40802388213818",
+      "sku": "GRANMIX8US",
+      "netItemsSold": 3
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/40873658056762",
+      "sku": "4787-5-1/4",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/40896370769978",
+      "sku": "42564-03-65",
+      "netItemsSold": 10
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/41154489647162",
+      "sku": "ATLETIX60",
+      "netItemsSold": 4
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/41171222036538",
+      "sku": "EC900-N09148W-005-40",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/41225707946042",
+      "sku": "IT09067066",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/41226728865850",
+      "sku": "1000000001191",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/41272271994938",
+      "sku": "B2NAUS",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/41274439204922",
+      "sku": "WINTER405",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/41296700538938",
+      "sku": "CORRO-51085713146147",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/41296700637242",
+      "sku": "CORRO-49540107141411",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/41301726330938",
+      "sku": "BH10100003",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/41321317138490",
+      "sku": "1000000001350",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/41350122471482",
+      "sku": "1000000001460",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-23",
+      "variantId": "gid://shopify/ProductVariant/41387337678906",
+      "sku": "1000000001259",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-24",
+      "variantId": "gid://shopify/ProductVariant/29060047568941",
+      "sku": "2005",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-24",
+      "variantId": "gid://shopify/ProductVariant/29229206732845",
+      "sku": "82696304",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-24",
+      "variantId": "gid://shopify/ProductVariant/29229208567853",
+      "sku": "126652",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-24",
+      "variantId": "gid://shopify/ProductVariant/29607574929453",
+      "sku": "SLP-10",
+      "netItemsSold": 3
+    },
+    {
+      "day": "2026-07-24",
+      "variantId": "gid://shopify/ProductVariant/31359437045818",
+      "sku": "15497-1",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-24",
+      "variantId": "gid://shopify/ProductVariant/32226423341114",
+      "sku": "851393005017",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-24",
+      "variantId": "gid://shopify/ProductVariant/39253400780858",
+      "sku": "BLIC6US",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-24",
+      "variantId": "gid://shopify/ProductVariant/39272284454970",
+      "sku": "1003669001",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-24",
+      "variantId": "gid://shopify/ProductVariant/39437611073594",
+      "sku": "MAHBOX10",
+      "netItemsSold": 10
+    },
+    {
+      "day": "2026-07-24",
+      "variantId": "gid://shopify/ProductVariant/39437643874362",
+      "sku": "82193806",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-24",
+      "variantId": "gid://shopify/ProductVariant/39488861601850",
+      "sku": "707129259479",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-24",
+      "variantId": "gid://shopify/ProductVariant/40044530368570",
+      "sku": "21274981",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-24",
+      "variantId": "gid://shopify/ProductVariant/40108512739386",
+      "sku": "82194676-SINGLE",
+      "netItemsSold": 5
+    },
+    {
+      "day": "2026-07-24",
+      "variantId": "gid://shopify/ProductVariant/40180250837050",
+      "sku": "SUM408",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-24",
+      "variantId": "gid://shopify/ProductVariant/40266295705658",
+      "sku": "430854",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-24",
+      "variantId": "gid://shopify/ProductVariant/40318276862010",
+      "sku": "GRANBALLAP",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-24",
+      "variantId": "gid://shopify/ProductVariant/40318278860858",
+      "sku": "GRANAPX8US",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-24",
+      "variantId": "gid://shopify/ProductVariant/40529789747258",
+      "sku": "EEEHLB1UNIT",
+      "netItemsSold": 3
+    },
+    {
+      "day": "2026-07-24",
+      "variantId": "gid://shopify/ProductVariant/40538611941434",
+      "sku": "64ca5f8aced89",
+      "netItemsSold": -1
+    },
+    {
+      "day": "2026-07-24",
+      "variantId": "gid://shopify/ProductVariant/40538612269114",
+      "sku": "64ca5f8944c2a",
+      "netItemsSold": -1
+    },
+    {
+      "day": "2026-07-24",
+      "variantId": "gid://shopify/ProductVariant/40558054375482",
+      "sku": "851393005925",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-24",
+      "variantId": "gid://shopify/ProductVariant/40778859642938",
+      "sku": "WINTER601",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-24",
+      "variantId": "gid://shopify/ProductVariant/40793198002234",
+      "sku": "15-3301208BK-7",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-24",
+      "variantId": "gid://shopify/ProductVariant/40899723001914",
+      "sku": "AFRE10-VF00-ME",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-24",
+      "variantId": "gid://shopify/ProductVariant/40959343427642",
+      "sku": "IT07157018",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-24",
+      "variantId": "gid://shopify/ProductVariant/41042639093818",
+      "sku": "bell1",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-24",
+      "variantId": "gid://shopify/ProductVariant/41066435608634",
+      "sku": "4",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-24",
+      "variantId": "gid://shopify/ProductVariant/41154489647162",
+      "sku": "ATLETIX60",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-24",
+      "variantId": "gid://shopify/ProductVariant/41171222102074",
+      "sku": "EC900-N09148W-005-44",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-24",
+      "variantId": "gid://shopify/ProductVariant/41274439204922",
+      "sku": "WINTER405",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-24",
+      "variantId": "gid://shopify/ProductVariant/41296702013498",
+      "sku": "CORRO-51085713342755",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-24",
+      "variantId": "gid://shopify/ProductVariant/41321317466170",
+      "sku": "1000000001342",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-24",
+      "variantId": "gid://shopify/ProductVariant/41357967884346",
+      "sku": "EEENSH004OZ",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-24",
+      "variantId": "gid://shopify/ProductVariant/41387337678906",
+      "sku": "1000000001259",
+      "netItemsSold": -1
+    },
+    {
+      "day": "2026-07-25",
+      "variantId": "gid://shopify/ProductVariant/29060060905517",
+      "sku": "3540BK-018",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-25",
+      "variantId": "gid://shopify/ProductVariant/29060134928429",
+      "sku": "SAFT-2-PK",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-25",
+      "variantId": "gid://shopify/ProductVariant/29060164485165",
+      "sku": "1410BK",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-25",
+      "variantId": "gid://shopify/ProductVariant/31359437045818",
+      "sku": "15497-1",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-25",
+      "variantId": "gid://shopify/ProductVariant/32245908602938",
+      "sku": "AE006",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-25",
+      "variantId": "gid://shopify/ProductVariant/39253400780858",
+      "sku": "BLIC6US",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-25",
+      "variantId": "gid://shopify/ProductVariant/39437639057466",
+      "sku": "12416-3",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-25",
+      "variantId": "gid://shopify/ProductVariant/39489945337914",
+      "sku": "SAFT-2-RSP",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-25",
+      "variantId": "gid://shopify/ProductVariant/39528165834810",
+      "sku": "SFPP",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-25",
+      "variantId": "gid://shopify/ProductVariant/40106522705978",
+      "sku": "LC053",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-25",
+      "variantId": "gid://shopify/ProductVariant/40108512739386",
+      "sku": "82194676-SINGLE",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-25",
+      "variantId": "gid://shopify/ProductVariant/40141882064954",
+      "sku": "DYABAB-BR-F",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-25",
+      "variantId": "gid://shopify/ProductVariant/40308870021178",
+      "sku": "10804",
+      "netItemsSold": 3
+    },
+    {
+      "day": "2026-07-25",
+      "variantId": "gid://shopify/ProductVariant/40318276862010",
+      "sku": "GRANBALLAP",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-25",
+      "variantId": "gid://shopify/ProductVariant/40485476204602",
+      "sku": "DY04I-BR-C",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-25",
+      "variantId": "gid://shopify/ProductVariant/40688943923258",
+      "sku": "AABPV3-BJD0-75",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-25",
+      "variantId": "gid://shopify/ProductVariant/40802398339130",
+      "sku": "GRANBALLNAUS",
+      "netItemsSold": 4
+    },
+    {
+      "day": "2026-07-25",
+      "variantId": "gid://shopify/ProductVariant/40884797177914",
+      "sku": "DY02ABRF",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-25",
+      "variantId": "gid://shopify/ProductVariant/40894072979514",
+      "sku": "42614-08-F",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-25",
+      "variantId": "gid://shopify/ProductVariant/40895412731962",
+      "sku": "42571-08-SJ",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-25",
+      "variantId": "gid://shopify/ProductVariant/41118567628858",
+      "sku": "REIN-059-F",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-25",
+      "variantId": "gid://shopify/ProductVariant/41216449347642",
+      "sku": "DDJGE5081",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-25",
+      "variantId": "gid://shopify/ProductVariant/41226603397178",
+      "sku": "",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-25",
+      "variantId": "gid://shopify/ProductVariant/41226736500794",
+      "sku": "1000000001266",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-25",
+      "variantId": "gid://shopify/ProductVariant/41274439204922",
+      "sku": "WINTER405",
+      "netItemsSold": 4
+    },
+    {
+      "day": "2026-07-25",
+      "variantId": "gid://shopify/ProductVariant/41296701620282",
+      "sku": "CORRO-49540107305251",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-25",
+      "variantId": "gid://shopify/ProductVariant/41321327919162",
+      "sku": "MSS",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-25",
+      "variantId": "gid://shopify/ProductVariant/41357967884346",
+      "sku": "EEENSH004OZ",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-25",
+      "variantId": "gid://shopify/ProductVariant/41388191055930",
+      "sku": "StallMat-T125BK",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-26",
+      "variantId": "gid://shopify/ProductVariant/29060164485165",
+      "sku": "1410BK",
+      "netItemsSold": 5
+    },
+    {
+      "day": "2026-07-26",
+      "variantId": "gid://shopify/ProductVariant/29229183172653",
+      "sku": "70109",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-26",
+      "variantId": "gid://shopify/ProductVariant/29607574044717",
+      "sku": "P20FBBLACK6",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-26",
+      "variantId": "gid://shopify/ProductVariant/39377300717626",
+      "sku": "21278832",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-26",
+      "variantId": "gid://shopify/ProductVariant/39437625557050",
+      "sku": "80193",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-26",
+      "variantId": "gid://shopify/ProductVariant/39437637681210",
+      "sku": "11170-4",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-26",
+      "variantId": "gid://shopify/ProductVariant/39437649281082",
+      "sku": "2325",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-26",
+      "variantId": "gid://shopify/ProductVariant/39465373958202",
+      "sku": "WBM",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-26",
+      "variantId": "gid://shopify/ProductVariant/40128200441914",
+      "sku": "FALL507",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-26",
+      "variantId": "gid://shopify/ProductVariant/40128206995514",
+      "sku": "FALL508",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-26",
+      "variantId": "gid://shopify/ProductVariant/40141882064954",
+      "sku": "DYABAB-BR-F",
+      "netItemsSold": -1
+    },
+    {
+      "day": "2026-07-26",
+      "variantId": "gid://shopify/ProductVariant/40306170921018",
+      "sku": "S-10521",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-26",
+      "variantId": "gid://shopify/ProductVariant/40306170953786",
+      "sku": "S-7858",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-26",
+      "variantId": "gid://shopify/ProductVariant/40485476204602",
+      "sku": "DY04I-BR-C",
+      "netItemsSold": -1
+    },
+    {
+      "day": "2026-07-26",
+      "variantId": "gid://shopify/ProductVariant/40485480300602",
+      "sku": "DY04F-BR-F",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-26",
+      "variantId": "gid://shopify/ProductVariant/40758256369722",
+      "sku": "StallMat-5x10BagBK",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-26",
+      "variantId": "gid://shopify/ProductVariant/40763799109690",
+      "sku": "BH20010001",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-26",
+      "variantId": "gid://shopify/ProductVariant/40802388213818",
+      "sku": "GRANMIX8US",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-26",
+      "variantId": "gid://shopify/ProductVariant/40862931124282",
+      "sku": "HR-72237-7.5",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-26",
+      "variantId": "gid://shopify/ProductVariant/40862931157050",
+      "sku": "HR-72237-8",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-26",
+      "variantId": "gid://shopify/ProductVariant/40895511232570",
+      "sku": "82158-01-55",
+      "netItemsSold": 4
+    },
+    {
+      "day": "2026-07-26",
+      "variantId": "gid://shopify/ProductVariant/41042639454266",
+      "sku": "sku-44800489062556",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-26",
+      "variantId": "gid://shopify/ProductVariant/41226533240890",
+      "sku": "",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-26",
+      "variantId": "gid://shopify/ProductVariant/41274439204922",
+      "sku": "WINTER405",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-26",
+      "variantId": "gid://shopify/ProductVariant/41296699555898",
+      "sku": "C-49540107403555",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-26",
+      "variantId": "gid://shopify/ProductVariant/41296701947962",
+      "sku": "CORRO-47757021446435",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-26",
+      "variantId": "gid://shopify/ProductVariant/41321327919162",
+      "sku": "MSS",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-26",
+      "variantId": "gid://shopify/ProductVariant/41357833240634",
+      "sku": "",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-26",
+      "variantId": "gid://shopify/ProductVariant/41433933283386",
+      "sku": "IT09156013",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-26",
+      "variantId": "gid://shopify/ProductVariant/41433943343162",
+      "sku": "IT08824013",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-27",
+      "variantId": "gid://shopify/ProductVariant/31035429453882",
+      "sku": "KCT880-161",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-27",
+      "variantId": "gid://shopify/ProductVariant/40538616856634",
+      "sku": "6596d5ce0b756",
+      "netItemsSold": -1
+    },
+    {
+      "day": "2026-07-27",
+      "variantId": "gid://shopify/ProductVariant/40538616922170",
+      "sku": "6596d5ce0b760",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-27",
+      "variantId": "gid://shopify/ProductVariant/40827978612794",
+      "sku": "1027309001",
+      "netItemsSold": -1
+    },
+    {
+      "day": "2026-07-27",
+      "variantId": "gid://shopify/ProductVariant/40833116045370",
+      "sku": "sku-52973475299619",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-27",
+      "variantId": "gid://shopify/ProductVariant/40873658056762",
+      "sku": "4787-5-1/4",
+      "netItemsSold": -1
+    },
+    {
+      "day": "2026-07-27",
+      "variantId": "gid://shopify/ProductVariant/40894079434810",
+      "sku": "42615-33-F",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-27",
+      "variantId": "gid://shopify/ProductVariant/41066669801530",
+      "sku": "sku-48161794556180",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-27",
+      "variantId": "gid://shopify/ProductVariant/41267970670650",
+      "sku": "SME001",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-27",
+      "variantId": "gid://shopify/ProductVariant/41274439204922",
+      "sku": "WINTER405",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-28",
+      "variantId": "gid://shopify/ProductVariant/29060118741037",
+      "sku": "3840PU-018",
+      "netItemsSold": 3
+    },
+    {
+      "day": "2026-07-28",
+      "variantId": "gid://shopify/ProductVariant/29211996979245",
+      "sku": "89-20335",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-28",
+      "variantId": "gid://shopify/ProductVariant/29227813208109",
+      "sku": "091-10350",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-28",
+      "variantId": "gid://shopify/ProductVariant/29227826872365",
+      "sku": "TIGER-1010",
+      "netItemsSold": 0
+    },
+    {
+      "day": "2026-07-28",
+      "variantId": "gid://shopify/ProductVariant/29229165903917",
+      "sku": "427870",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-28",
+      "variantId": "gid://shopify/ProductVariant/29229199687725",
+      "sku": "091-10380",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-28",
+      "variantId": "gid://shopify/ProductVariant/29436075606061",
+      "sku": "89-44335",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-28",
+      "variantId": "gid://shopify/ProductVariant/29607574175789",
+      "sku": "P20FBNAVY6",
+      "netItemsSold": 8
+    },
+    {
+      "day": "2026-07-28",
+      "variantId": "gid://shopify/ProductVariant/31925668839482",
+      "sku": "TEOS",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-28",
+      "variantId": "gid://shopify/ProductVariant/39253400748090",
+      "sku": "100520149",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-28",
+      "variantId": "gid://shopify/ProductVariant/39437584531514",
+      "sku": "764782004907",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-28",
+      "variantId": "gid://shopify/ProductVariant/39437584564282",
+      "sku": "764782001906",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-28",
+      "variantId": "gid://shopify/ProductVariant/39437587054650",
+      "sku": "02009",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-28",
+      "variantId": "gid://shopify/ProductVariant/39437602259002",
+      "sku": "62102",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-28",
+      "variantId": "gid://shopify/ProductVariant/39437634371642",
+      "sku": "100508298",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-28",
+      "variantId": "gid://shopify/ProductVariant/39495981662266",
+      "sku": "KCM421-M-2017",
+      "netItemsSold": -1
+    },
+    {
+      "day": "2026-07-28",
+      "variantId": "gid://shopify/ProductVariant/40165317869626",
+      "sku": "69273",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-28",
+      "variantId": "gid://shopify/ProductVariant/40428816171066",
+      "sku": "SS-60C",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-28",
+      "variantId": "gid://shopify/ProductVariant/40429588742202",
+      "sku": "AFAR90-IBWT-84",
+      "netItemsSold": -1
+    },
+    {
+      "day": "2026-07-28",
+      "variantId": "gid://shopify/ProductVariant/40577222967354",
+      "sku": "CCSS19",
+      "netItemsSold": 0
+    },
+    {
+      "day": "2026-07-28",
+      "variantId": "gid://shopify/ProductVariant/40802398371898",
+      "sku": "GRANBALLMIUS",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-28",
+      "variantId": "gid://shopify/ProductVariant/40988508848186",
+      "sku": "SPR504",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-28",
+      "variantId": "gid://shopify/ProductVariant/41056876199994",
+      "sku": "23489698336030847154",
+      "netItemsSold": 3
+    },
+    {
+      "day": "2026-07-28",
+      "variantId": "gid://shopify/ProductVariant/41118582177850",
+      "sku": "TQ-G-B-7.5",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-28",
+      "variantId": "gid://shopify/ProductVariant/41262743257146",
+      "sku": "IT00816005",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-28",
+      "variantId": "gid://shopify/ProductVariant/41272707219514",
+      "sku": "1029728012",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-28",
+      "variantId": "gid://shopify/ProductVariant/41272725340218",
+      "sku": "AFRNGP-IJI0-84",
+      "netItemsSold": -1
+    },
+    {
+      "day": "2026-07-28",
+      "variantId": "gid://shopify/ProductVariant/41388191055930",
+      "sku": "StallMat-T125BK",
+      "netItemsSold": -1
+    },
+    {
+      "day": "2026-07-28",
+      "variantId": "gid://shopify/ProductVariant/41563515977786",
+      "sku": "FALL302",
+      "netItemsSold": 0
+    },
+    {
+      "day": "2026-07-29",
+      "variantId": "gid://shopify/ProductVariant/29607637155885",
+      "sku": "RAM-04S",
+      "netItemsSold": 4
+    },
+    {
+      "day": "2026-07-29",
+      "variantId": "gid://shopify/ProductVariant/31765556297786",
+      "sku": "819094",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-29",
+      "variantId": "gid://shopify/ProductVariant/31925668839482",
+      "sku": "TEOS",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-29",
+      "variantId": "gid://shopify/ProductVariant/31976131166266",
+      "sku": "82603",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-29",
+      "variantId": "gid://shopify/ProductVariant/39408058269754",
+      "sku": "31132011",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-29",
+      "variantId": "gid://shopify/ProductVariant/39437590298682",
+      "sku": "670000 775 290 9/XXL",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-29",
+      "variantId": "gid://shopify/ProductVariant/39437599834170",
+      "sku": "18184-2",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-29",
+      "variantId": "gid://shopify/ProductVariant/39437632995386",
+      "sku": "10220",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-29",
+      "variantId": "gid://shopify/ProductVariant/39437637681210",
+      "sku": "11170-4",
+      "netItemsSold": 3
+    },
+    {
+      "day": "2026-07-29",
+      "variantId": "gid://shopify/ProductVariant/40429588611130",
+      "sku": "AFAR90-IBWT-72",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-29",
+      "variantId": "gid://shopify/ProductVariant/40529784602682",
+      "sku": "EEIPRL1KG5",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-29",
+      "variantId": "gid://shopify/ProductVariant/40853757231162",
+      "sku": "42101-01-GEL",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-29",
+      "variantId": "gid://shopify/ProductVariant/40893963632698",
+      "sku": "72118",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-29",
+      "variantId": "gid://shopify/ProductVariant/40899371761722",
+      "sku": "5WBHHAZ",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-29",
+      "variantId": "gid://shopify/ProductVariant/41226061512762",
+      "sku": "IT04127029",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-29",
+      "variantId": "gid://shopify/ProductVariant/41263367290938",
+      "sku": "1029538004",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-29",
+      "variantId": "gid://shopify/ProductVariant/41263367422010",
+      "sku": "1029538008",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-29",
+      "variantId": "gid://shopify/ProductVariant/41274439204922",
+      "sku": "WINTER405",
+      "netItemsSold": 3
+    },
+    {
+      "day": "2026-07-29",
+      "variantId": "gid://shopify/ProductVariant/41292803735610",
+      "sku": "sku-43258819936412",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-30",
+      "variantId": "gid://shopify/ProductVariant/29229208567853",
+      "sku": "126652",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-30",
+      "variantId": "gid://shopify/ProductVariant/29866268131373",
+      "sku": "14900-2",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-30",
+      "variantId": "gid://shopify/ProductVariant/39437634371642",
+      "sku": "100508298",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-30",
+      "variantId": "gid://shopify/ProductVariant/39437639155770",
+      "sku": "13671-2",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-30",
+      "variantId": "gid://shopify/ProductVariant/39437647151162",
+      "sku": "90111",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-30",
+      "variantId": "gid://shopify/ProductVariant/39487430885434",
+      "sku": "02011-WD",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-30",
+      "variantId": "gid://shopify/ProductVariant/39488861306938",
+      "sku": "691037928070",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-30",
+      "variantId": "gid://shopify/ProductVariant/40128200441914",
+      "sku": "FALL507",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-30",
+      "variantId": "gid://shopify/ProductVariant/40463746334778",
+      "sku": "EFG116",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-30",
+      "variantId": "gid://shopify/ProductVariant/40773295013946",
+      "sku": "1000000000294",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-30",
+      "variantId": "gid://shopify/ProductVariant/40793197936698",
+      "sku": "15-3301208BK-6",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-30",
+      "variantId": "gid://shopify/ProductVariant/40827978612794",
+      "sku": "1027309001",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-30",
+      "variantId": "gid://shopify/ProductVariant/40894053449786",
+      "sku": "42609-33-F",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-30",
+      "variantId": "gid://shopify/ProductVariant/40959355224122",
+      "sku": "IT07485003",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-30",
+      "variantId": "gid://shopify/ProductVariant/41226603528250",
+      "sku": "",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-30",
+      "variantId": "gid://shopify/ProductVariant/41272707088442",
+      "sku": "1029728004",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-30",
+      "variantId": "gid://shopify/ProductVariant/41357968834618",
+      "sku": "C-691037928002",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-30",
+      "variantId": "gid://shopify/ProductVariant/41366187540538",
+      "sku": "1027309004",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-31",
+      "variantId": "gid://shopify/ProductVariant/29229173309485",
+      "sku": "14526-1",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-31",
+      "variantId": "gid://shopify/ProductVariant/29229208567853",
+      "sku": "126652",
+      "netItemsSold": 3
+    },
+    {
+      "day": "2026-07-31",
+      "variantId": "gid://shopify/ProductVariant/29866269409325",
+      "sku": "17230-1",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-31",
+      "variantId": "gid://shopify/ProductVariant/32035656237114",
+      "sku": "12423-1",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-31",
+      "variantId": "gid://shopify/ProductVariant/39272285208634",
+      "sku": "1003149008",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-31",
+      "variantId": "gid://shopify/ProductVariant/39437584564282",
+      "sku": "764782001906",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-31",
+      "variantId": "gid://shopify/ProductVariant/39437637943354",
+      "sku": "708852000352",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-31",
+      "variantId": "gid://shopify/ProductVariant/39437639155770",
+      "sku": "13671-2",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-31",
+      "variantId": "gid://shopify/ProductVariant/39464148992058",
+      "sku": "90594",
+      "netItemsSold": 3
+    },
+    {
+      "day": "2026-07-31",
+      "variantId": "gid://shopify/ProductVariant/39465373958202",
+      "sku": "WBM",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-31",
+      "variantId": "gid://shopify/ProductVariant/39536518725690",
+      "sku": "851393005420",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-31",
+      "variantId": "gid://shopify/ProductVariant/40019237404730",
+      "sku": "18911-2",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-31",
+      "variantId": "gid://shopify/ProductVariant/40052642742330",
+      "sku": "SUM402",
+      "netItemsSold": 4
+    },
+    {
+      "day": "2026-07-31",
+      "variantId": "gid://shopify/ProductVariant/40266295705658",
+      "sku": "430854",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-31",
+      "variantId": "gid://shopify/ProductVariant/40320386990138",
+      "sku": "8881535796",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-31",
+      "variantId": "gid://shopify/ProductVariant/40501543895098",
+      "sku": "GRANORX8US",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-31",
+      "variantId": "gid://shopify/ProductVariant/40538618462266",
+      "sku": "64ca5d2f5038a",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-31",
+      "variantId": "gid://shopify/ProductVariant/40538618626106",
+      "sku": "64ca5d301d5a7",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-31",
+      "variantId": "gid://shopify/ProductVariant/40786063523898",
+      "sku": "430",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-31",
+      "variantId": "gid://shopify/ProductVariant/40827978645562",
+      "sku": "1027309002",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-31",
+      "variantId": "gid://shopify/ProductVariant/40892919218234",
+      "sku": "82139-05",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-31",
+      "variantId": "gid://shopify/ProductVariant/40892919251002",
+      "sku": "82138-05",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-31",
+      "variantId": "gid://shopify/ProductVariant/40895500615738",
+      "sku": "82111-01-F",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-31",
+      "variantId": "gid://shopify/ProductVariant/40895510151226",
+      "sku": "82155-25-ALVIN",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-31",
+      "variantId": "gid://shopify/ProductVariant/40895510183994",
+      "sku": "82155-32-SAMMY",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-31",
+      "variantId": "gid://shopify/ProductVariant/40895577882682",
+      "sku": "1336",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-31",
+      "variantId": "gid://shopify/ProductVariant/41274439204922",
+      "sku": "WINTER405",
+      "netItemsSold": 2
+    },
+    {
+      "day": "2026-07-31",
+      "variantId": "gid://shopify/ProductVariant/41554106744890",
+      "sku": "SC58-OLIVE-S",
+      "netItemsSold": 1
+    },
+    {
+      "day": "2026-07-31",
+      "variantId": "gid://shopify/ProductVariant/41554106908730",
+      "sku": "SC58-COCO-M",
+      "netItemsSold": 1
+    }
+  ],
+  "summary": {
+    "adjustmentRows": 9890,
+    "salesRows": 871,
+    "verifiedReceiptRows": 0,
+    "verifiedReceiptUnits": 0,
+    "filteredAdjustmentRows": 9890,
+    "unidentifiedReceiptRows": 0,
+    "unidentifiedReceiptUnits": 0,
+    "unidentifiedSalesRows": 31,
+    "unidentifiedNetSales": 31,
+    "otherPositiveAvailableUnits": 156243,
+    "netItemsSold": 1279,
+    "customerRestockAdjustmentRows": 39
+  }
+}
