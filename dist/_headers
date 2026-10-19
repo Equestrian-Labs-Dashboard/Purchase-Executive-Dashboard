@@ -1,7 +1,0 @@
-/*
-  X-Content-Type-Options: nosniff
-  Referrer-Policy: same-origin
-/data/*
-  Cache-Control: no-store
-/assets/*
-  Cache-Control: no-cache

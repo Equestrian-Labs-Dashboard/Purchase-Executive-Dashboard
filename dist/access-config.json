@@ -1,9 +1,0 @@
-{
-  "report": "Purchase Executive Dashboard",
-  "permission": "Purchase Executive Dashboard",
-  "permissions": [
-    "purchase_executive",
-    "Purchase Executive Dashboard"
-  ],
-  "portal": "https://equestrian-labs-dashboard.pages.dev"
-}
