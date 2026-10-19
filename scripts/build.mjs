@@ -11,9 +11,9 @@ if(!source.meta?.stores?.corro)throw Error('Corro source is absent; refusing to 
 const byId=new Map((source.currentInventory||[]).map(r=>[`${r.store}|${r.variantId}`,r]));
 const select=(row,keys)=>Object.fromEntries(keys.filter(k=>row[k]!==undefined).map(k=>[k,row[k]]));
 const enrich=row=>({...row,brand:row.brand||byId.get(`${row.store}|${row.variantId}`)?.brand||'',currency:row.currency||byId.get(`${row.store}|${row.variantId}`)?.currency||'',retailCurrency:row.retailCurrency||byId.get(`${row.store}|${row.variantId}`)?.currency||'',category:row.category||byId.get(`${row.store}|${row.variantId}`)?.category||'Uncategorized'});
-const receiptKeys=['store','vendor','brand','category','currency','retailCurrency','sku','product','variant','variantId','unitsReceived','unitCost','retailPrice','costBasis','cohortType','dateBasis','receivedAt','cohortDate','soldWithinDays','openingHistoryAvailable','allocationConfidence','salesThrough'];
+const receiptKeys=['store','vendor','brand','category','currency','retailCurrency','sku','product','variant','variantId','inventoryItemId','unitsReceived','unitCost','retailPrice','costBasis','cohortType','dateBasis','receivedAt','cohortDate','soldWithinDays','openingHistoryAvailable','allocationConfidence','salesThrough'];
 const salesKeys=['store','vendor','brand','category','currency','soldAt','quantityOrdered','netUnits','costOfGoodsSold','costSource','netSales','grossSales','discounts','netSalesSource','grossSalesSource','discountsSource'];
-const meta={generatedAt:source.meta.generatedAt,startDate:source.meta.startDate,stores:{corro:select(source.meta.stores.corro,['label','salesThrough','salesDailyCoverage','receiptPermissions','purchaseOrderError','shipmentError','nativeDailyCoverage'])}};
+const meta={generatedAt:source.meta.generatedAt,startDate:source.meta.startDate,stores:{corro:select(source.meta.stores.corro,['label','salesThrough','salesDailyCoverage','receiptPermissions','purchaseOrderError','shipmentError','nativeDailyCoverage','supplementaryUnattributedUnits','supplementaryMissingCatalogUnits','supplementaryMatchedReceiptUnits','supplementaryArchiveMonths'])}};
 const dates=Object.values(meta.stores).map(s=>s.salesThrough).filter(Boolean).sort();
 if(!dates.length)throw Error('Export has no complete reporting date');
 // Compact monthly vendor+category history supports the real Monthly Rotation
@@ -35,6 +35,7 @@ const report={version:2,meta,asOf:dates[0],receipts:(source.cohorts||[]).filter(
   customerReturnCount:(source.customerRestocks||[]).filter(isCorro).length,
   sales:(source.sales||[]).filter(isCorro).map(r=>select(enrich(r),salesKeys)),
   catalog:(source.currentInventory||[]).filter(isCorro).map(r=>select(enrich(r),['store','vendor','brand','category','currency','variantId','sku','currentUnits','unitCost','retailPrice'])),
+  receiptMonthLedger:(source.receiptMonthLedger||[]).filter(isCorro).map(r=>select(enrich(r),['store','vendor','brand','category','month','inventoryItemId','variantId','sku','product','unitsReceived','soldFromMonthReceipts','previousStockSold','openingStockSold','olderReceiptSold','customerReturnStockSold','observedAdjustmentStockSold','unattributedSales','orderedUnits','netItemsSold','openingHistoryAvailable','allocationConfidence'])),
   monthly:[...monthlyMap.values()]};
 // Validate the source before replacing the previous output.
 if(path.dirname(out)!==root||(await fs.lstat(out).catch(()=>null))?.isSymbolicLink())throw Error('Unsafe build output');

@@ -23,7 +23,7 @@ export function allocateDatedCohorts({shop,receipts,sales,catalog,openingHistory
  const month=monthOf(startDate);
  const baseline=new Map((openingHistory||[]).filter(x=>x.store===shop.key && x.month===month).map(x=>[inventoryIdentity(x),x]));
  const keys=new Set([...productsBy.keys(),...stocked.keys(),...sold.keys(),...returned.keys()]);
- const cohorts=[],inventory=[];
+ const cohorts=[],inventory=[],receiptMonthLedger=[];
  let unallocatedUnits=0,unallocatedItems=0,openingEstimateUnits=0,missingOpeningSkus=0;
  for(const key of keys){
    const lines=[...(stocked.get(key)||[])].sort((a,b)=>a.cohortDate.localeCompare(b.cohortDate)||String(a.receiptId).localeCompare(String(b.receiptId)));
@@ -39,15 +39,45 @@ export function allocateDatedCohorts({shop,receipts,sales,catalog,openingHistory
      ...returns.map(row=>({kind:'return',row,remaining:qty(row.unitsRestocked ?? row.unitsReceived)}))]
      .sort((a,b)=>a.row.cohortDate.localeCompare(b.row.cohortDate)||String(a.row.receiptId).localeCompare(String(b.row.receiptId)));
    const lots=[{kind:'opening',remaining:opening},...datedLots];
+   // Per-SKU/per-calendar-month stock ledger. Count a unit sold exactly once:
+   // (a) newly received supplier stock, (b) prior opening/older receipts,
+   // (c) non-purchase returns/observed adjustments or (d) unmatched.
+   const byMonth=new Map();
+   const monthLine=month=>{
+     if(!byMonth.has(month))byMonth.set(month,{
+       store:shop.key,storeLabel:shop.label,month,inventoryItemId:item.inventoryItemId||'',variantId:item.variantId||'',
+       sku:item.sku||'',product:item.product||'',variant:item.variant||'',vendor:item.vendor||'Unknown',
+       category:item.category||'Uncategorized',brand:item.brand||'',currency:item.currency||'',
+       unitsReceived:0,soldFromMonthReceipts:0,previousStockSold:0,
+       openingStockSold:0,olderReceiptSold:0,customerReturnStockSold:0,
+       observedAdjustmentStockSold:0,unattributedSales:0,orderedUnits:0,netItemsSold:0,
+       openingHistoryAvailable:hasStart,allocationConfidence:hasStart?'estimated_fifo':'missing_opening_stock'
+     });
+     return byMonth.get(month);
+   };
+   for(const receipt of lines){
+     if(receipt.cohortType==='receipt')monthLine(monthOf(receipt.cohortDate)).unitsReceived+=qty(receipt.unitsReceived);
+   }
    let unmatched=0;
    for(const sale of orders){
+     const salesMonth=monthLine(monthOf(sale.soldAt));
+     salesMonth.orderedUnits+=qty(sale.units);
+     if(Number.isFinite(Number(sale.netUnits)))salesMonth.netItemsSold+=Number(sale.netUnits);
      let remaining=qty(sale.units);
      for(const lot of lots){
        if(remaining===0)break;
        if(lot.remaining<=0 || lot.kind!=='opening' && sale.soldAt < lot.row.cohortDate) continue;
        const used=Math.min(remaining,lot.remaining);
        remaining-=used;lot.remaining-=used;
+       if(lot.kind==='opening'){
+         salesMonth.openingStockSold+=used;
+         salesMonth.previousStockSold+=used;
+       }else if(lot.kind==='return')salesMonth.customerReturnStockSold+=used;
        if(lot.kind==='cohort'){
+         if(lot.row.cohortType==='receipt'){
+           if(monthOf(lot.row.cohortDate)===monthOf(sale.soldAt))salesMonth.soldFromMonthReceipts+=used;
+           else {salesMonth.olderReceiptSold+=used;salesMonth.previousStockSold+=used;}
+         }else salesMonth.observedAdjustmentStockSold+=used;
          lot.unitsSold+=used;
          const age=utcDays(lot.row.cohortDate,sale.soldAt);
          // First 30 calendar days includes the receipt date and day 29;
@@ -56,8 +86,9 @@ export function allocateDatedCohorts({shop,receipts,sales,catalog,openingHistory
          lot.soldByOffset[offsetBucket(lot.row.cohortDate,sale.soldAt)]+=used;
        }
      }
-     unmatched+=remaining;
+     unmatched+=remaining;salesMonth.unattributedSales+=remaining;
    }
+   for(const record of byMonth.values())receiptMonthLedger.push(record);
    if(unmatched){unallocatedItems++;unallocatedUnits+=unmatched;}
    for(const lot of lots){
      if(lot.kind!=='cohort')continue;
@@ -76,5 +107,5 @@ export function allocateDatedCohorts({shop,receipts,sales,catalog,openingHistory
    }
    inventory.push({...item,store:shop.key,storeLabel:shop.label,currentUnits:qty(item.currentUnits),unitCost:qty(item.unitCost),inventoryValue:qty(item.currentUnits)*qty(item.unitCost),unitsSoldSinceStart:orders.reduce((s,x)=>s+qty(x.units),0),openingEstimateInternal:opening,cohortRemaining:lots.filter(l=>l.kind==='cohort').reduce((s,l)=>s+l.remaining,0)});
  }
- return {cohorts,inventory,unallocatedUnits,unallocatedItems,openingEstimateUnits,missingOpeningSkus};
+ return {cohorts,inventory,receiptMonthLedger,unallocatedUnits,unallocatedItems,openingEstimateUnits,missingOpeningSkus};
 }

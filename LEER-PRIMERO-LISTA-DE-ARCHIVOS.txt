@@ -1,0 +1,28 @@
+Purchase — Cambios ADICIONALES desde el ZIP corregido ya entregado antes.
+Subir el contenido del ZIP (NO el ZIP) a la raíz del repositorio respectivo conservando rutas.
+No borrar los demás archivos existentes.
+
+Archivos a subir:
+.github/workflows/sync-purchase.yml
+IMPORTAR-CSV-SHOPIFY.ps1
+README-NOVIEMBRE-2026.md
+README.md
+assets/css/purchase.css
+assets/js/app.mjs
+assets/js/purchaseCore.mjs
+data/shopifyql-import/corro/2026-01.json
+index.html
+package.json
+scripts/auto-shopify-source.mjs
+scripts/build.mjs
+scripts/cohort-allocation.mjs
+scripts/export-portable-inventory.mjs
+scripts/normalize-receipt-data.mjs
+scripts/prune-portable-inventory.mjs
+scripts/receipt-utils.mjs
+scripts/shopify-event-query.mjs
+scripts/shopify-sales-source.mjs
+scripts/shopifyql-csv-import.mjs
+scripts/sync-shopify-inventory.mjs
+tests/purchase.test.mjs
+tests/receipt-month-groups.test.mjs

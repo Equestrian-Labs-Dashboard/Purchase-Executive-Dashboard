@@ -14,12 +14,13 @@ export function normalizeReceiptData(source) {
   const customerRestocks=all.filter(row=>row.cohortType==='return');
   const eligible=all.filter(row=>row.cohortType==='receipt'&&row.dateBasis==='received' || row.cohortType==='restock'&&row.dateBasis==='observed_stock_increase');
   const stores=[...new Set(eligible.map(row=>row.store))];
-  const cohorts=[];
+  const cohorts=[],receiptMonthLedger=[];
   for(const store of stores) {
     const info=source.meta?.stores?.[store] || {};
     const allocation=allocateDatedCohorts({shop:{key:store,label:info.label||store},receipts:eligible.filter(row=>row.store===store),
       inventoryReturns:customerRestocks.filter(row=>row.store===store),sales:(source.sales||[]).filter(row=>row.store===store),
       catalog:(source.currentInventory||[]).filter(row=>row.store===store),openingHistory:source.monthlyInventory||[],startDate:source.meta?.startDate||'2026-06-01'});
+    receiptMonthLedger.push(...allocation.receiptMonthLedger);
     for(const row of allocation.cohorts) {
       row.salesMetric=info.salesMetric||'quantity_ordered';row.salesSource=info.salesSource||'';row.salesThrough=info.salesThrough||'';
       const status=info.nativeDailyCoverage?.[row.cohortMonth]?.status;
@@ -30,5 +31,5 @@ export function normalizeReceiptData(source) {
   return {...source,meta:{...source.meta,receiptClassificationVersion:2},customerRestocks,
     nativeRestockEvents:(source.nativeRestockEvents||[]).map(normalizeInventoryEvent),
     cohortInputs:(source.cohortInputs||[]).map(normalizeInventoryEvent).filter(row=>row.cohortType==='receipt'),
-    cohorts:cohorts.filter(row=>row.cohortType==='receipt'),observedRestockCohorts:cohorts.filter(row=>row.cohortType==='restock')};
+    receiptMonthLedger,cohorts:cohorts.filter(row=>row.cohortType==='receipt'),observedRestockCohorts:cohorts.filter(row=>row.cohortType==='restock')};
 }

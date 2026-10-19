@@ -108,3 +108,27 @@ button:hover,.button:hover{box-shadow:0 5px 14px #264a2d16}
 @media (max-width:1200px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:760px){main{padding-top:17px}.hero{margin-bottom:17px}.hero h1{font-size:clamp(30px,7vw,39px)}.hero p{font-size:12px}.filters{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:13px}.fixed-store strong{min-height:41px}.kpis{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.kpi{min-height:138px;padding:13px 12px}.kpi-value{font-size:23px}.kpi-value.unavailable{font-size:14px}.context-kpis .kpi{min-height:122px}.section-label.kpi-heading h2{font-size:15px}.section-label.kpi-heading{flex-wrap:wrap}.section-label.kpi-heading>span{max-width:none;text-align:left}.panel-head h2{font-size:21px}.brand-caption{font-size:9px}.receipt-table{min-width:1260px}}
 @media (max-width:390px){.kpis{grid-template-columns:1fr}.filters{grid-template-columns:1fr 1fr}}
+
+/* Screenshot-aligned eight-column priorities with hidden, editable extra KPI fields. */
+#priorities .plan-table{min-width:1320px;table-layout:fixed}
+#priorities .plan-table th:first-child{width:220px}
+#priorities .plan-table th:nth-child(2){width:165px}
+#priorities .plan-table th:nth-child(3){width:135px}
+#priorities .plan-table th:nth-child(4){width:235px}
+#priorities .plan-table th:nth-child(5){width:180px}
+#priorities .plan-table th:nth-child(6){width:150px}
+#priorities .plan-table th:nth-child(7){width:225px}
+#priorities .plan-table th:nth-child(8){width:135px}
+#priorities .plan-table td{padding:14px 11px}
+#priorities .plan-table textarea{min-height:68px}
+#priorities .plan-table input[type=date]{min-height:41px;padding:8px}
+.advanced-targets{margin-top:10px;border:1px solid var(--line);border-radius:8px;padding:7px 9px;background:var(--surface)}
+.advanced-targets summary{font-size:10px;color:var(--accent);font-weight:700;cursor:pointer;letter-spacing:.02em}
+.advanced-target-grid{display:grid;gap:10px;margin-top:10px;min-width:190px}
+.advanced-target-grid label{font-size:10px;text-transform:none;letter-spacing:normal}
+.advanced-target-grid input,.advanced-target-grid textarea{font-size:12px}
+@media(max-width:760px){#priorities .plan-table{min-width:0;table-layout:auto}#priorities .plan-table tr{grid-template-columns:repeat(2,minmax(0,1fr))}#priorities .plan-table td:nth-child(4),#priorities .plan-table td:nth-child(7){grid-column:span 2}}
+
+/* Receipt-month cohort sales: separate original FIFO stock from new receipts. */
+.receipt-month-sales .previous-stock {display:block;margin-top:.4rem;font-size:.76rem;font-weight:600;color:#3c735e;white-space:nowrap}
+[data-theme="dark"] .receipt-month-sales .previous-stock {color:#91d1b2}

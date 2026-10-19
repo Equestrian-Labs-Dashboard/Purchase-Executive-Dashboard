@@ -19,34 +19,60 @@ export function completeCoverage(info, start, end, field) {
   }
   return true;
 }
+// Group incoming receipts by supplier and receipt MONTH. Several arrivals of
+// the same SKU must not duplicate its previous-stock sale attribution.
 export function receiptGroups(data, filters) {
-  const range=periodRange(filters.type,filters.period,data.asOf), map=new Map();
-  for(const r of data.receipts.filter(isReceivedCohort).filter(r=>valid(r.unitsReceived)&&r.unitsReceived>0&&matches(r,filters))) {
+  const range=periodRange(filters.type,filters.period,data.asOf),map=new Map();
+  for(const r of data.receipts.filter(isReceivedCohort).filter(r=>valid(r.unitsReceived)&&r.unitsReceived>0&&matches(r,filters))){
     const date=r.receivedAt||r.cohortDate;
     if(date<range.start||date>range.end||date>data.asOf)continue;
-    const key=JSON.stringify([r.store,r.vendor,date,r.currency||'Unknown']);
-    if(!map.has(key))map.set(key,{key,store:r.store,vendor:r.vendor,date,currency:r.currency||'Unknown',rows:[]});
-    map.get(key).rows.push(r);
+    const month=date.slice(0,7);
+    const key=JSON.stringify([r.store,r.vendor,month,r.currency||'Unknown']);
+    if(!map.has(key))map.set(key,{key,store:r.store,vendor:r.vendor,month,date,currency:r.currency||'Unknown',rows:[],dates:new Set()});
+    const g=map.get(key);g.rows.push(r);g.dates.add(date);
+    if(date<g.date)g.date=date;
   }
+  const monthRows=data.receiptMonthLedger||[];
+  const skuKey=r=>String(r.inventoryItemId||r.variantId||r.sku||'').trim().toLowerCase();
+  const endMonth=month=>new Date(Date.UTC(Number(month.slice(0,4)),Number(month.slice(5)),0)).toISOString().slice(0,10);
   return [...map.values()].map(g=>{
     const units=sum(g.rows,'unitsReceived');
     const costsComplete=g.rows.every(r=>valid(r.unitCost)&&Number(r.unitCost)>0&&['purchase_order_cost','manual_recorded_cost'].includes(r.costBasis));
     const cost=costsComplete?g.rows.reduce((n,r)=>n+r.unitsReceived*r.unitCost,0):null;
     const retail=g.rows.every(r=>valid(r.retailPrice)&&r.retailPrice>0&&r.retailCurrency===g.currency&&g.currency!=='Unknown')?g.rows.reduce((n,r)=>n+r.unitsReceived*r.retailPrice,0):null;
-    const through=data.meta.stores[g.store]?.salesThrough||data.asOf, windows={};
-    for(const days of [30,60,90]) {
-      const end=addDays(g.date,days-1), coveredEnd=end<through?end:through;
-      // Allocation uses the entire stock timeline, not just this receipt window.
-      const covered=completeCoverage(data.meta.stores[g.store],data.meta.startDate,coveredEnd);
-      const points=g.rows.map(r=>covered?checkpoint(r,days,through):{status:'unavailable'});
+    const through=data.meta.stores[g.store]?.salesThrough||data.asOf,windows={};
+    for(const days of [30,60,90]){
+      // Each receipt's clock starts on its own date, not the first of month.
+      const end=g.rows.reduce((last,r)=>{const day=addDays(r.receivedAt||r.cohortDate,days-1);return day>last?day:last;},g.date);
+      const points=g.rows.map(r=>{
+        const rowEnd=addDays(r.receivedAt||r.cohortDate,days-1);
+        const coveredEnd=rowEnd<through?rowEnd:through;
+        return r.openingHistoryAvailable===true&&r.allocationConfidence==='estimated_fifo'&&completeCoverage(data.meta.stores[g.store],data.meta.startDate,coveredEnd)?checkpoint(r,days,through):{status:'unavailable'};
+      });
       const status=points.some(p=>p.status==='unavailable')?'unavailable':points.some(p=>p.status==='pending')?'pending':'ready';
       const sold=status==='unavailable'?null:points.reduce((n,p)=>n+(p.units??p.soFarUnits??0),0);
       windows[days]={status,start:g.date,end,units:sold,pct:sold!==null&&units>0?sold/units*100:null};
     }
-    const remaining90=windows[90].status==='ready'?units-windows[90].units:null;
-    return {...g,units,cost,retail,markup:cost>0&&retail!==null?(retail/cost-1)*100:null,windows,remaining90};
-  }).sort((a,b)=>b.date.localeCompare(a.date)||a.vendor.localeCompare(b.vendor));
+    const distinct=new Set(g.rows.map(skuKey));
+    const included=monthRows.filter(row=>row.store===g.store&&row.month===g.month&&row.vendor===g.vendor&&distinct.has(skuKey(row))&&matches(row,filters));
+    const receivedLedger=new Map(included.map(row=>[skuKey(row),row]));
+    const close=endMonth(g.month),cutoff=close<through?close:through;
+    const validLedger=distinct.size>0&&[...distinct].every(k=>{
+      const row=receivedLedger.get(k);return row?.openingHistoryAvailable===true&&row.allocationConfidence==='estimated_fifo';
+    }) && cutoff>=g.month+'-01' && completeCoverage(data.meta.stores[g.store],data.meta.startDate,cutoff);
+    const soldInReceiptMonth=validLedger?[...receivedLedger.values()].reduce((n,r)=>n+Number(r.soldFromMonthReceipts||0),0):null;
+    const previousStockSold=validLedger?[...receivedLedger.values()].reduce((n,r)=>n+Number(r.previousStockSold||0),0):null;
+    const totalOrderedMonth=validLedger?[...receivedLedger.values()].reduce((n,r)=>n+Number(r.orderedUnits||0),0):null;
+    const monthStatus=validLedger?(close<=through?'complete':'in_progress'):'unavailable';
+    const remaining90=windows[90].status==='ready'?Math.max(0,units-windows[90].units):null;
+    const remainingCost90=remaining90!==null&&costsComplete
+      ?g.rows.reduce((value,r)=>value+Math.max(0,Number(r.unitsReceived)-(Number(r.soldWithinDays?.[90])||0))*Number(r.unitCost),0)
+      :null;
+    return {...g,dates:[...g.dates].sort(),units,cost,retail,markup:cost>0&&retail!==null?(retail/cost-1)*100:null,
+      soldInReceiptMonth,previousStockSold,totalOrderedMonth,monthStatus,windows,remaining90,remainingCost90};
+  }).sort((a,b)=>b.month.localeCompare(a.month)||a.vendor.localeCompare(b.vendor));
 }
+
 export function selectedPerformance(data,filters) {
   const range=periodRange(filters.type,filters.period,data.asOf);
   const stores=Object.keys(data.meta.stores).filter(s=>filters.store==='all'||filters.store===s);
