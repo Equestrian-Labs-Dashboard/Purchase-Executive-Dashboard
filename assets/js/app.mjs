@@ -1,5 +1,7 @@
 import {receiptGroups,receiptTotals,selectedPerformance,sampleVendors,periodRange,matches,currentReceiptSkuStock} from './purchaseCore.mjs';
 import {emptyPlan,validatePlan,carryForward,nextMonth,fields,statuses} from './priorities.mjs';
+import {sourceMetrics} from './sourceMetrics.mjs';
+import {observedStockGroups} from './stockAdditionsView.mjs';
 const $=id=>document.getElementById(id),esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const number=v=>v===null||v===undefined?'—':new Intl.NumberFormat('en-US',{maximumFractionDigits:0}).format(v);
 const pct=v=>v===null||v===undefined?'—':`${v.toFixed(1)}%`;
@@ -8,6 +10,7 @@ const nice=day=>new Date(day+'T00:00:00Z').toLocaleDateString('en-US',{timeZone:
 const monthNice=month=>new Date(month+'-01T00:00:00Z').toLocaleDateString('en-US',{timeZone:'UTC',month:'short',year:'numeric'});
 const labels=['Priority / Initiative','Category / Vendor','Target Date','Expected Result (KPI)','Actual Result','Status','Next Step','Owner'];
 const visiblePlanFields=['priority','vendor','targetDate','successMeasure','results','status','nextStep','owner'];
+let stockEvidence=[],requestedSharedPlan=false;
 let data,config,groups=[],audit=[],reviews={},reviewIndex=0,attention=false,plan,planMode='local',loadSequence=0;
 const filters=()=>({store:'corro',brand:$('brand').value,vendor:$('vendor').value,category:$('category').value,type:$('periodType').value,period:$('period').value});
 function options(id,values,allLabel){const previous=$(id).value;$(id).innerHTML=(allLabel?`<option value="all">${esc(allLabel)}</option>`:'')+values.map(v=>`<option value="${esc(v.value??v)}">${esc(v.label??v)}</option>`).join('');if([...$(id).options].some(o=>o.value===previous))$(id).value=previous;}
@@ -26,9 +29,18 @@ function refreshDimensions(){
 }
 function kpi(label,value,note,icon='◈',tone=''){return `<article class="kpi"><div class="kpi-top"><span>${label}</span><span class="kpi-icon" aria-hidden="true">${icon}</span></div><div class="kpi-value ${value==='Source required'||value==='No receipts'?'unavailable':tone}">${value}</div><small>${note}</small></article>`;}
 const classRate=value=>value>=config.strongThreshold?'good':value<config.attentionThreshold?'bad':'warning';
+function renderStockAdditions(){
+  const target=$('observedStockRows');if(!target)return;
+  const rows=observedStockGroups(stockEvidence,filters(),data.asOf);
+  const qty=rows.reduce((n,r)=>n+r.units,0);
+  $('observedStockSummary').textContent=`${number(qty)} units in ${rows.length} vendor/month groups · UNVERIFIED manual stock increases · not supplier purchases`;
+  target.innerHTML=rows.length?rows.map(r=>`<tr><td><strong>${esc(r.vendor)}</strong><small>${esc(monthNice(r.month))} · Corro</small></td><td>${r.dates.map(esc).join(', ')}</td><td class="numeric">${number(r.units)}</td><td class="numeric">${number(r.skuCount)}</td><td class="numeric">${r.estimatedCurrentCost===null?'N/A':money(r.estimatedCurrentCost,r.costCurrency)}<small>${number(r.pricedUnits)}/${number(r.units)} units have current cost · NOT historical invoice cost</small></td><td>Manual Shopify adjustment<small>Receipt/vendor PO and FIFO sell-through not verified</small></td></tr>`).join(''):'<tr><td colspan="6">No dated manual stock increases in this selection. Verified supplier receipts require separate Shopify documents.</td></tr>';
+}
 function render(){
  const f=filters(),range=periodRange(f.type,f.period,data.asOf);
- groups=receiptGroups(data,f);const totals=receiptTotals(groups),perf=selectedPerformance(data,f);
+ groups=receiptGroups(data,f);const totals=receiptTotals(groups),perf=selectedPerformance(data,f),available=sourceMetrics(data,f);
+ const costNote=`${available.costCoveredRows}/${available.salesRows} Shopify sales rows have both net sales and sold COGS`;
+ const currentSnapshotDate=data.meta.stores.corro?.salesThrough||data.asOf;
  const inventory=new URL(config.inventoryUrl);inventory.searchParams.set('store','corro');
  if(f.vendor!=='all')inventory.searchParams.set('vendor',f.vendor);inventory.searchParams.set('period',range.start.slice(0,7));
  $('inventoryLink').href=inventory;$('inventoryNav').href=inventory;
@@ -42,19 +54,36 @@ function render(){
  // Five reference KPIs. Missing source metrics remain pending; do not reuse
  // catalog figures as receipt cost or gross profit. 30-day rate is mature FIFO.
  $('purchaseKpis').innerHTML=[
-   kpi('MARK UP (Avg.)',totals.markup==null?'Source required':pct(totals.markup),'Weighted current retail vs. documented receipt cost','↗'),
-   kpi('SELL-THROUGH RATE (30 days)',totals.rate30==null?'Source required':pct(totals.rate30),`${totals.mature30} mature 30-day receipt groups · SKU FIFO estimate`,'◴'),
-   kpi('% DISCOUNT (Avg.)',!config.showDiscounts||perf.discountPct==null?'Source required':pct(perf.discountPct),'Shopify discounts ÷ gross sales · no double subtraction','%'),
-   kpi('GROSS MARGIN 1',perf.grossMargin==null?'Source required':pct(perf.grossMargin),'Actual net sales minus transaction COGS ÷ net sales','◫'),
-   kpi('GROSS PROFIT 1 (after discount)',perf.grossProfit==null?'Source required':money(perf.grossProfit,perf.currency),'Net sales after discounts/reversals minus sold COGS','＄',perf.grossProfit!==null&&perf.grossProfit<0?'negative':'positive')
+   kpi(totals.markup==null?'CATALOG MARKUP (CURRENT)*':'MARK UP (RECEIPTS)',
+      totals.markup!=null?pct(totals.markup):available.catalogMarkup==null?'Source required':pct(available.catalogMarkup),
+      totals.markup!=null?'Weighted, documented receipt costs':`Current stock prices and unit costs; ${number(available.valuedUnits)}/${number(available.holdingUnits)} priced units. NOT purchase markup`,'↗'),
+   kpi('SELL-THROUGH RATE (30 days)',totals.rate30==null?'No receipts':pct(totals.rate30),`${totals.mature30} mature verified receipt groups · FIFO estimate`,'◴'),
+   kpi('% DISCOUNT (Avg.)',!config.showDiscounts||perf.discountPct==null?'Source required':pct(perf.discountPct),'Shopify gross_sales and discounts are needed; net_sales alone cannot prove the discount','%'),
+   kpi(perf.grossMargin==null?'MATCHED SALES MARGIN*':'GROSS MARGIN 1',
+      perf.grossMargin!=null?pct(perf.grossMargin):available.grossMarginMatched==null?'Source required':pct(available.grossMarginMatched),
+      perf.grossMargin!=null?'Actual net sales minus transaction COGS ÷ net sales':`${costNote}; matched subset only, NOT full-store margin`,'◫'),
+   kpi(perf.grossProfit==null?'MATCHED SALES PROFIT*':'GROSS PROFIT 1 (after discount)',
+      perf.grossProfit!=null?money(perf.grossProfit,perf.currency):available.grossProfitMatched==null?'Source required':money(available.grossProfitMatched,available.salesCurrency),
+      perf.grossProfit!=null?'Net sales less Shopify transaction COGS':`${costNote}; same subset for revenue and COGS`,'＄',available.grossProfitMatched!==null&&available.grossProfitMatched<0?'negative':'positive')
  ].join('');
  $('contextPeriod').textContent=`Corro · ${nice(range.start)} to ${nice([range.end,data.asOf].sort()[0])}${range.end>data.asOf?' · In Progress':''}`;
+ const rotation=perf.monthlyRotation;
+ const rotationLabel=rotation===null?'Source required':`${rotation>0&&rotation<.01?rotation.toFixed(3):rotation.toFixed(2)}x`;
  $('businessKpis').innerHTML=[
-   kpi('INVENTORY COGS VALUE',perf.inventoryCost==null?'Source required':money(perf.inventoryCost,perf.inventoryCurrency),'Latest on-hand stock × catalog cost · not purchased COGS','▣'),
-   kpi('RETAIL VALUE (full price)',perf.inventoryRetail==null?'Source required':money(perf.inventoryRetail,perf.inventoryCurrency),'Latest on-hand units × current full retail price','◇'),
-   kpi('INVENTORY UNITS (on hand)',perf.currentStockUnits==null?'Source required':number(perf.currentStockUnits),'Latest Shopify Corro inventory snapshot','▥'),
-   kpi('MONTHLY ROTATION',perf.monthlyRotation==null?'Source required':`${perf.monthlyRotation.toFixed(2)}x`,'Units sold ÷ average starting/ending units; one month only','⟳'),
-   kpi('COGS SOLD (Month)',perf.cost==null?'Source required':money(perf.cost,perf.currency),`${f.type==='month'?'Selected month':'Selected period'} · Shopify transaction cost only`,'▤')
+   kpi('INVENTORY VALUE (SHOPIFY)',available.endingValue==null?'Source required':money(available.endingValue,available.endingCurrency),`Shopify month-end inventory value · ${available.snapshotMonth||'no historical snapshot'} · NOT documented purchase COGS`,'▣'),
+   kpi('CURRENT RETAIL (PRICED SUBTOTAL)',available.retailSubset==null?'Source required':`${available.pricedUnits<available.holdingUnits?'≥ ':''}${money(available.retailSubset,available.pricedCurrency)}`,`Latest current stock as of ${currentSnapshotDate} · ${number(available.pricedUnits)}/${number(available.holdingUnits)} units priced`,'◇'),
+   kpi('PERIOD-ENDING INVENTORY UNITS',available.endingUnits==null?'Source required':number(available.endingUnits),`Shopify month-end stock snapshot · ${available.snapshotMonth||'none'} · NOT added across months`,'▥'),
+   kpi('MONTHLY ROTATION',rotationLabel,'Shopify monthly units sold ÷ average month-start/end units; month selection only','⟳'),
+   kpi(available.fullyCostCovered?'COGS SOLD (MONTH)':'COGS SOLD (COVERED ROWS)',
+      available.matchedCogs===null?'Source required':money(available.matchedCogs,available.salesCurrency),
+      `${costNote}; partial total if some rows lack COGS`,'▤')
+ ].join('');
+ renderStockAdditions();
+ $('salesContextKpis').innerHTML=[
+   kpi('SHOPIFY NET SALES',available.netSales===null?'Source required':money(available.netSales,available.salesCurrency),`From ShopifyQL net_sales · through ${available.end} · all stock`,'＄'),
+   kpi('NET UNITS SOLD',available.netUnits===null?'Source required':number(available.netUnits),'ShopifyQL net_items_sold · sales of all stock, not only new receipts','▣'),
+   kpi('QUANTITY ORDERED',available.quantityOrdered===null?'Source required':number(available.quantityOrdered),'ShopifyQL quantity_ordered · not a count of inventory received','▥'),
+   kpi('SOLD COGS COVERAGE',available.salesRows===0?'No sales rows':`${available.costCoveredRows}/${available.salesRows}`,`Shopify sales rows with both net_sales and cost_of_goods_sold · ${available.salesRows?Math.round(100*available.costCoveredRows/available.salesRows):0}%`,'◇')
  ].join('');
  renderReceipts();renderSources();audit=sampleVendors(data,f);loadReviews();renderAudit();
 }
@@ -71,11 +100,21 @@ const csv=v=>'"'+String(v??'').replace(/^[=+@-]/,"'$&").replaceAll('"','""')+'"'
 function exportReceipts(){const header=['Store','Vendor','Units In','COGS Value','Currency','Markup % at current retail','Retail Value','Date Received','Sold From This Month Receipts (FIFO)','Previous Stock Sold','Month Status',...[30,60,90].flatMap(d=>[`${d}d units`,`${d}d %`,`${d}d status`]),'Remaining Units (90d FIFO)','Stock Value (90d, receipt COGS)'];const rows=groups.map(g=>[g.store,g.vendor,g.units,g.cost,g.currency,g.markup,g.retail,g.date,g.soldInReceiptMonth,g.previousStockSold,g.monthStatus,...[30,60,90].flatMap(d=>[g.windows[d].units,g.windows[d].pct,g.windows[d].status]),g.remaining90,g.remainingCost90]);download(`purchase-receipts-${filters().period}.csv`,[header,...rows].map(r=>r.map(csv).join(',')).join('\r\n'),'text/csv;charset=utf-8');}
 const planKey=month=>`purchase-plan-v1:${month}`;
 function localPlan(month){const saved=localStorage.getItem(planKey(month));if(!saved)return emptyPlan(month);try{return validatePlan(JSON.parse(saved));}catch{throw Error('Saved plan could not be read. Preserve the browser backup before replacing it.');}}
-async function fetchPlan(month){let res;try{res=await fetch(`api/priorities?month=${encodeURIComponent(month)}`,{cache:'no-store'});}catch{return {mode:'local',plan:localPlan(month)};}if([404,503].includes(res.status))return {mode:'local',plan:localPlan(month)};if(!res.ok && res.status>=500)return {mode:'local',plan:localPlan(month)};const body=await res.json();if(!res.ok)throw Error(body.error||'Shared plan access failed');if(body?.storageMode==='local')return {mode:'local',plan:localPlan(month)};return {mode:'shared',plan:validatePlan(body)};}
+async function fetchPlan(month){
+  // Team plans require an authenticated session. Do not cause HTTP 401 errors
+  // on every public dashboard load; the user opts in explicitly.
+  if(!requestedSharedPlan)return {mode:'local',plan:localPlan(month)};
+  let res;try{res=await fetch(`api/priorities?month=${encodeURIComponent(month)}`,{cache:'no-store'});}catch{return {mode:'local',plan:localPlan(month)};}
+  if([401,403].includes(res.status)){requestedSharedPlan=false;return {mode:'local',plan:localPlan(month),needsLogin:true};}
+  if([404,503].includes(res.status)||res.status>=500)return {mode:'local',plan:localPlan(month)};
+  const body=await res.json();if(!res.ok)throw Error(body.error||'Shared plan access failed');
+  if(body?.storageMode==='local')return {mode:'local',plan:localPlan(month)};
+  return {mode:'shared',plan:validatePlan(body)};
+}
 async function loadPlan(month){const sequence=++loadSequence;$('savePlan').disabled=true;$('carryPlan').disabled=true;
-  try{const result=await fetchPlan(month);if(sequence!==loadSequence)return;plan=result.plan;planMode=result.mode;$('planMessage').textContent='';}
+  try{const result=await fetchPlan(month);if(sequence!==loadSequence)return;plan=result.plan;planMode=result.mode;$('planMessage').textContent=result.needsLogin?'Sign in to use the shared team plan. Your local draft is still editable.':'';}
   catch(error){if(sequence!==loadSequence)return;try{plan=localPlan(month);}catch{plan=emptyPlan(month);}planMode='error';$('planMessage').textContent=error.message+' · Local draft available; shared save is disabled.';}
-  if(sequence!==loadSequence)return;$('planMode').textContent=planMode==='shared'?'Shared workspace · save changes for the team':planMode==='local'?'Local browser plan only · not shared; use Backup or configure the PURCHASE_DB binding':'Local draft · shared connection needs attention';$('savePlan').disabled=planMode==='error';$('carryPlan').disabled=planMode==='error';renderPlan();
+  if(sequence!==loadSequence)return;$('planMode').textContent=planMode==='shared'?'Shared workspace · save changes for the team':planMode==='local'?'Local browser plan only · use Team plan after signing in':'Local draft · shared connection needs attention';$('savePlan').disabled=planMode==='error';$('carryPlan').disabled=planMode==='error';renderPlan();
 }
 function renderPlan(){
  const edit=(r,i,field,label,advanced=false)=>{
@@ -103,9 +142,11 @@ function openReview(index){reviewIndex=index;const r=audit[index],old=reviews[au
 function saveReview(event){event.preventDefault();const r=audit[reviewIndex],form=new FormData($('reviewForm'));const comparisons=reviewMetrics(r).map(([field,,dashboard])=>{const raw=String(form.get(field)||'').trim(),shopify=raw===''?null:field==='dateReceived'?raw:Number(raw);return {field,dashboard,shopify,difference:dashboard===null||shopify===null?null:field==='dateReceived'?(dashboard===shopify?0:1):Math.round((dashboard-shopify)*1000000)/1000000};});reviews[auditId(r)]={reference:$('reviewReference').value,checkedAt:new Date().toISOString(),comparisons};localStorage.setItem(auditKey(),JSON.stringify(reviews));$('reviewDialog').close();renderAudit();}
 async function init(){try{const get=async url=>{const res=await fetch(url,{cache:'no-store'});if(!res.ok)throw Error(`Could not load ${url} (${res.status})`);return res.json();};const [manifest,cfg]=await Promise.all([get('data/manifest.json'),get('site-config.json')]);config=cfg;if(!/^https?:$/.test(new URL(config.inventoryUrl).protocol))throw Error('Invalid Inventory link');
   const parts=await Promise.all(manifest.files.map(async entry=>{if(!/^purchase_[a-z]+_\d+\.json$/.test(entry.file))throw Error('Invalid data path');return {...entry,rows:await get('data/'+entry.file)};}));data={...parts.find(p=>p.key==='base').rows[0],sales:parts.filter(p=>p.key==='sales').flatMap(p=>p.rows),catalog:parts.filter(p=>p.key==='catalog').flatMap(p=>p.rows)};
+  try{const evidence=await get('assets/data/corro-stock-evidence.json');stockEvidence=evidence?.events||[];}catch{stockEvidence=[];}
   $('sourceDate').textContent=`Shopify · through ${nice(data.asOf)}`;$('buildStamp').textContent=`v1 · source ${data.meta.generatedAt.slice(0,10)}`;$('store').value='corro';refreshDimensions();refreshPeriods();render();$('planMonth').value=data.asOf.slice(0,7);await loadPlan($('planMonth').value);
   $('brand').onchange=()=>{refreshDimensions();render();};$('category').onchange=()=>{refreshDimensions();render();};$('vendor').onchange=render;$('periodType').onchange=()=>{refreshPeriods();render();};$('period').onchange=render;$('reset').onclick=()=>{$('store').value='corro';$('category').value='all';$('brand').value='all';$('vendor').value='all';$('periodType').value='month';refreshDimensions();refreshPeriods();attention=false;$('onlyAttention').setAttribute('aria-pressed','false');render();};
   $('onlyAttention').onclick=()=>{attention=!attention;$('onlyAttention').setAttribute('aria-pressed',String(attention));renderReceipts();};$('sourceOpen').onclick=openSources;$('exportReceipts').onclick=exportReceipts;
+  $('connectPlan').onclick=()=>{requestedSharedPlan=true;loadPlan($('planMonth').value);};
   $('planMonth').onchange=()=>{if(/^\d{4}-(0[1-9]|1[0-2])$/.test($('planMonth').value))loadPlan($('planMonth').value);};$('planRows').oninput=event=>{const {row,field}=event.target.dataset;if(row===undefined)return;plan.rows[Number(row)][field]=event.target.value;try{draft();$('planMessage').textContent=planMode==='shared'?'Draft saved locally. Click Save plan to update the team.':'Draft saved in this browser.';}catch(error){$('planMessage').textContent=error.message;}};
   $('planRows').onclick=event=>{const toggle=event.target.closest('[data-toggle]');if(!toggle)return;const row=toggle.closest('tr');row.classList.toggle('expanded');toggle.setAttribute('aria-expanded',String(row.classList.contains('expanded')));};
   $('savePlan').onclick=saveCurrent;$('carryPlan').onclick=carry;$('exportPlan').onclick=()=>{try{download(`purchase-priorities-${plan.month}.json`,validatePlan(plan));}catch(error){$('planMessage').textContent=error.message;}};$('importPlan').onchange=async event=>{try{const file=event.target.files[0];if(!file)return;if(file.size>100000)throw Error('Plan file is too large');const incoming=validatePlan(JSON.parse(await file.text()));if(incoming.month!==plan.month)throw Error('Select the matching plan month before importing.');plan={...incoming,version:plan.version};draft();renderPlan();$('planMessage').textContent='Imported as a draft. Click Save plan to apply it.';}catch(error){$('planMessage').textContent=error.message;}event.target.value='';};

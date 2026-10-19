@@ -25,10 +25,12 @@ for(const row of (source.monthlyInventory||[]).filter(isCorro)) {
   const brand=row.brand||identity.brand||'Unspecified';
   const category=row.category||identity.category||'Uncategorized';
   const vendor=row.vendor||'Unknown';
-  const key=JSON.stringify([row.month,vendor,brand,category]);
-  if(!monthlyMap.has(key))monthlyMap.set(key,{store:'corro',month:row.month,vendor,brand,category,startingUnits:0,endingUnits:0,unitsSold:0});
+  const currency=row.currency||'Unknown';
+  const key=JSON.stringify([row.month,vendor,brand,category,currency]);
+  if(!monthlyMap.has(key))monthlyMap.set(key,{store:'corro',month:row.month,vendor,brand,category,currency,startingUnits:0,endingUnits:0,unitsSold:0,endingValue:0,missingValueRows:0});
   const out=monthlyMap.get(key);
   for(const field of ['startingUnits','endingUnits','unitsSold'])out[field]+=Number(row[field])||0;
+  if(row.endingInventoryValue!==null&&row.endingInventoryValue!==undefined&&Number.isFinite(Number(row.endingInventoryValue))){out.endingValue+=Number(row.endingInventoryValue);}else{out.missingValueRows++;}
 }
 const report={version:2,meta,asOf:dates[0],receipts:(source.cohorts||[]).filter(isCorro).map(r=>select(enrich(r),receiptKeys)),
   observed:(source.observedRestockCohorts||[]).filter(isCorro).map(r=>select(enrich(r),receiptKeys)),

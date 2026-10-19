@@ -6,7 +6,7 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "test": "node --test tests/*.test.mjs",
-    "check": "node --check assets/js/app.mjs && node --check assets/js/purchaseCore.mjs && node --check assets/js/priorities.mjs && node --check scripts/build.mjs && node --check functions/api/priorities.js && node --check scripts/sync-shopify-inventory.mjs && node --check scripts/shopify-sales-source.mjs && node --check scripts/cohort-allocation.mjs && node --check scripts/export-portable-inventory.mjs && node --check scripts/shopifyql-csv-import.mjs",
+    "check": "node --check assets/js/app.mjs && node --check assets/js/purchaseCore.mjs && node --check assets/js/sourceMetrics.mjs && node --check assets/js/stockAdditionsView.mjs && node --check assets/js/priorities.mjs && node --check scripts/build.mjs && node --check functions/api/priorities.js && node --check scripts/sync-shopify-inventory.mjs && node --check scripts/shopify-sales-source.mjs && node --check scripts/cohort-allocation.mjs && node --check scripts/export-portable-inventory.mjs && node --check scripts/shopifyql-csv-import.mjs",
     "preview": "node scripts/preview.mjs",
     "sync:purchase": "node scripts/sync-shopify-inventory.mjs",
     "export:data": "node scripts/export-portable-inventory.mjs",
