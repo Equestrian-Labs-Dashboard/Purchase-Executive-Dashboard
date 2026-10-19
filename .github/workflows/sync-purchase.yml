@@ -1,1 +1,91 @@
+name: Purchase · Corro Shopify direct (from November 2026)
 
+on:
+  schedule:
+    # Weekly Sundays, from 2026-11-01: 16:17 UTC = 12:17 Bolivia.
+    # October 2026 excluded to consume no Action minutes.
+    # This also skips October in future years; review before 2027-10.
+    - cron: '17 16 * 1-9,11-12 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: e-labs-purchase-shopify
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - name: Stop before November 1, 2026
+        id: gate
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const today = new Intl.DateTimeFormat('en-CA', {timeZone:'America/La_Paz',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
+          const get = name => today.find(x=>x.type===name).value;
+          const enabled = `${get('year')}-${get('month')}-${get('day')}` >= '2026-11-01';
+          fs.appendFileSync(process.env.GITHUB_OUTPUT,`enabled=${enabled}\n`);
+          NODE
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.enabled == 'true'
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        if: steps.gate.outputs.enabled == 'true'
+        with:
+          node-version: '24'
+      - name: Validate configuration and code
+        if: steps.gate.outputs.enabled == 'true'
+        env:
+          CORRO_SHOPIFY_STORE: ${{ secrets.CORRO_SHOPIFY_STORE }}
+          CORRO_SHOPIFY_TOKEN: ${{ secrets.CORRO_SHOPIFY_TOKEN }}
+        run: |
+          npm run check
+          npm test
+          node --input-type=module -e "for (const k of ['CORRO_SHOPIFY_STORE','CORRO_SHOPIFY_TOKEN']) if (!process.env[k]?.trim()) throw Error('Missing existing secret ' + k)"
+      - name: Rebuild Corro purchase history from January 2026
+        if: steps.gate.outputs.enabled == 'true'
+        env:
+          NODE_OPTIONS: --max-old-space-size=4096
+          SHOPIFY_STORES: corro
+          OUTPUT_FILE: ${{ runner.temp }}/corro-purchase-fresh.json
+          INVENTORY_START_DATE: '2026-01-01'
+          INVENTORY_HISTORY_START_DATE: '2026-01-01'
+          INVENTORY_RECEIPTS_MODE: auto
+          SHOPIFY_API_VERSION: ${{ vars.SHOPIFY_API_VERSION || '2026-10' }}
+          SHOPIFYQL_PAGE_SIZE: ${{ vars.SHOPIFYQL_PAGE_SIZE || '1000' }}
+          SHOPIFYQL_MIN_DELAY_MS: ${{ vars.SHOPIFYQL_MIN_DELAY_MS || '6500' }}
+          CORRO_SHOPIFY_STORE: ${{ secrets.CORRO_SHOPIFY_STORE }}
+          CORRO_SHOPIFY_TOKEN: ${{ secrets.CORRO_SHOPIFY_TOKEN }}
+        run: node scripts/sync-shopify-inventory.mjs
+      - name: Publish only verified Corro inventory receipt source
+        if: steps.gate.outputs.enabled == 'true'
+        env:
+          NODE_OPTIONS: --max-old-space-size=4096
+          INVENTORY_SOURCE_FILE: ${{ runner.temp }}/corro-purchase-fresh.json
+          INVENTORY_REQUIRED_STORES: corro
+        run: |
+          npm run export:data
+          npm run data:prune
+          npm run build
+          node --input-type=module <<'NODE'
+          import {readInventorySource} from './scripts/inventory-source.mjs';
+          const result=await readInventorySource();
+          if(result.meta?.startDate!=='2026-01-01'||!result.meta?.stores?.corro?.ok||result.meta?.stores?.cavali)throw Error('Invalid Corro-only purchase source');
+          console.log('Validated Corro Purchase build',result.meta.generatedAt);
+          NODE
+      - name: Commit updated source
+        if: steps.gate.outputs.enabled == 'true'
+        run: |
+          git config user.name 'purchase-sync[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A data/shopify-export
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: update Purchase Corro Shopify receipts'
+            git push
+          fi
