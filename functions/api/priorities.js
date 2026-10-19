@@ -3,7 +3,16 @@ import {canUseReport} from '../_lib/registry.js';
 import {validatePlan,emptyPlan} from '../../assets/js/priorities.mjs';
 const reply=(value,status=200)=>Response.json(value,{status,headers:{'Cache-Control':'no-store'}});
 export function createPlanHandler({authorizeUser=authorize,canUse=canUseReport}={}) { return async function onRequest(context) {
-  if(!context.env.PURCHASE_DB)return reply({error:'Shared storage is not configured; local browser mode is available.'},503);
+  // Read-only local-mode handshake. A missing D1 binding is an optional
+  // deployment configuration, not an HTTP service outage for GET requests.
+  // The browser always reads and writes its local plan from localStorage;
+  // the API never accepts a write without a real shared database.
+  if(!context.env.PURCHASE_DB){
+    const month=new URL(context.request.url).searchParams.get('month');
+    if(!/^\d{4}-(0[1-9]|1[0-2])$/.test(month||''))return reply({error:'A valid plan month is required.'},400);
+    if(context.request.method==='GET')return reply({...emptyPlan(month),storageMode:'local',message:'PURCHASE_DB is not configured. Plans are saved in this browser only.'});
+    return reply({error:'Shared storage is unavailable. Configure the PURCHASE_DB D1 binding to enable shared plan writes.'},503);
+  }
   try{
     const {user}=await authorizeUser(context);
     if(!canUse(user,'purchase_executive'))return reply({error:'Purchase report access is required.'},403);
