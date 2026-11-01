@@ -6,7 +6,7 @@
 
 **Lee primero [`README-NOVIEMBRE-2026.md`](README-NOVIEMBRE-2026.md)** para actualizar GitHub, consultar los CSV de Shopify, copiar JSON de Corro y verificar Actions. No necesitas ningún token de GitHub cruzado: el workflow Purchase consulta exclusivamente Corro con `CORRO_SHOPIFY_STORE` y `CORRO_SHOPIFY_TOKEN` ya presentes como Secrets, sin acceso al API de Cavali.
 
-**Primer cron:** 1 de noviembre de 2026 a las 12:17 en Bolivia, archivo `.github/workflows/sync-purchase.yml`. No hay crons programados en octubre. La ejecución valida el historial desde enero 2026 antes de reemplazar el export. La Shopify API aún no se ha comprobado en vivo con los secretos privados, por lo que los datos existentes antes de la próxima extracción pertenecen a la fuente de octubre.
+**Primer cron de Purchase:** lunes 2 de noviembre de 2026 a las 15:00 UTC (10:00 Nueva York, 15:00 Londres y 16:00 Europa Central en noviembre), archivo `.github/workflows/sync-purchase.yml`. Se ejecuta semanalmente en día hábil; no hay crons programados en octubre. La ejecución valida el historial desde enero 2026 antes de reemplazar el export. La Shopify API aún no se ha comprobado en vivo con los secretos privados, por lo que los datos existentes antes de la próxima extracción pertenecen a la fuente de octubre.
 
 ## Tabla de entradas y rotación
 

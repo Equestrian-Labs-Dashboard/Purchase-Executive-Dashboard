@@ -24,7 +24,7 @@ function signInResponse(message = "Please sign in to view Purchase Executive Das
 
 export async function onRequest(context) {
   const url = new URL(context.request.url);
-  const protectedPath = url.pathname === "/" || url.pathname === "/index.html" || url.pathname === "/index" || url.pathname.startsWith("/data/");
+  const protectedPath = url.pathname === "/" || url.pathname === "/index.html" || url.pathname === "/index" || url.pathname === "/alerts-test.html" || url.pathname.startsWith("/data/");
   if (!protectedPath || !enabled(context.env.AUTH_REQUIRED)) return context.next();
 
   try {

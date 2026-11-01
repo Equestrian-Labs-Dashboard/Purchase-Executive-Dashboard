@@ -21,11 +21,11 @@ Antes de hacer el commit, confirmar que existe `.github/workflows/sync-purchase.
 
 **No necesitas crear ninguno.** El workflow valida los 2 de CORRO y ejecuta el extractor con `SHOPIFY_STORES: corro` y `INVENTORY_REQUIRED_STORES: corro`. Requiere que los permisos de la Shopify Admin API permitan acceder a productos, inventario, informes, pedidos antiguos y documentos de compra para obtener todas las métricas; algunas tiendas restringen las órdenes de compra. En esos casos, los datos no demostrables quedan `N/A`, nunca se simulan.
 
-## 3. Primera ejecución: 1 de noviembre de 2026
+## 3. Primera ejecución programada en día hábil: lunes 2 de noviembre de 2026
 
 Workflow: `.github/workflows/sync-purchase.yml`.
 
-- Cron `17 16 * 1-9,11-12 *` = **12:17 Bolivia**, diariamente de noviembre a septiembre. **Sin ejecuciones programadas en octubre**; el chequeo de fecha impide iniciar Shopify antes del 1 de noviembre de 2026 incluso si se ejecuta manualmente.
+- Cron `0 15 * 1-9,11-12 1` = **lunes a las 15:00 UTC** (10:00 Nueva York, 15:00 Londres y 16:00 Europa Central en noviembre). Se ejecuta semanalmente, no sábados ni domingos, y no tiene ejecuciones programadas en octubre. El control de fecha impide iniciar Shopify antes del 1 de noviembre de 2026 y bloquea ejecuciones manuales durante el fin de semana.
 - La primera ejecución reconstruye el historial Shopify desde `2026-01-01` hasta el día anterior en la zona horaria de la tienda.
 - Valida pruebas y cobertura antes de publicar. Si falta histórico esencial, **falla con explicación y conserva el último export**.
 - El cron excluye octubre también en años futuros: revisarlo antes de octubre de 2027 si quieres operar todo el año.
@@ -71,4 +71,4 @@ npm test
 npm run build
 ```
 
-No ejecutar manualmente el workflow de GitHub durante octubre; GitHub Actions puede consumir minutos de control aunque el workflow bloquee consultar Shopify. El 1 de noviembre verifica en la pestaña **Actions → Purchase · Corro Shopify direct** y revisa logs; después confirma que la web pública se actualizó. No se puede garantizar a priori que Shopify devuelva informes históricos completos: los permisos y la retención varían por recurso.
+No ejecutar manualmente el workflow de GitHub durante octubre; GitHub Actions puede consumir minutos de control aunque el workflow bloquee consultar Shopify. El lunes 2 de noviembre verifica en la pestaña **Actions → Purchase · Corro Shopify direct** y revisa logs; después confirma que la web pública se actualizó. No se puede garantizar a priori que Shopify devuelva informes históricos completos: los permisos y la retención varían por recurso.

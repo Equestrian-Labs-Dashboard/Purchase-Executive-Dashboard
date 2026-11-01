@@ -27,7 +27,7 @@ Fecha: 19 de octubre de 2026.
 
 **Purchase** (GitHub repo Purchase, desde la raíz):
 
-- `.github/workflows/sync-purchase.yml` — programado domingos desde 1 noviembre
+- `.github/workflows/sync-purchase.yml` — Purchase: programado lunes a las 15:00 UTC desde 2 noviembre (10:00 Nueva York / 15:00 Londres / 16:00 Europa Central en noviembre); nunca sábado ni domingo
 - `scripts/import-manual-shopify-history.mjs`
 - `scripts/export-portable-inventory.mjs`
 - `IMPORTAR-HISTORICO-SIN-ACTIONS.ps1`

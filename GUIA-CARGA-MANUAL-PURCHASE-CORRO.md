@@ -9,7 +9,7 @@
 ## Upload to Purchase GitHub, without GitHub Actions
 
 1. Extract `Purchase-PARCHES-Y-DATOS-CORRO-2026-10.zip`.
-2. Update `.github/workflows/sync-purchase.yml` for the weekly Sunday schedule from 2026-11-01.
+2. Update `.github/workflows/sync-purchase.yml` for the weekly Monday schedule from 2026-11-02.
 3. Upload `scripts/import-manual-shopify-history.mjs`, `scripts/export-portable-inventory.mjs`, `IMPORTAR-HISTORICO-SIN-ACTIONS.ps1`.
 4. Upload four monthly JSONs and `CSV-IMPORT-AUDIT.json` to `data/shopifyql-import/corro/`.
 5. Upload all `.json.gz` files into `data/shopify-export/` and **upload `manifest.json` in a second, final commit**. Do not delete old chunks until the new manifest is confirmed available.
@@ -21,4 +21,4 @@
 
 ## Refresh with more CSVs
 
-Run `IMPORTAR-HISTORICO-SIN-ACTIONS.ps1` in this project from PowerShell (Node 24), or send the Corro exports to ChatGPT to have the portable data generated. GitHub Actions are scheduled weekly, starting November 1, and may be delayed by GitHub. To see web changes before that date, an independent Cloudflare Pages build must be configured and triggered on Git commits; otherwise GitHub stores the new data until the next deployment.
+Run `IMPORTAR-HISTORICO-SIN-ACTIONS.ps1` in this project from PowerShell (Node 24), or send the Corro exports to ChatGPT to have the portable data generated. Purchase GitHub Actions are scheduled every Monday at 15:00 UTC, starting November 2, and may be delayed by GitHub. To see web changes before that date, an independent Cloudflare Pages build must be configured and triggered on Git commits; otherwise GitHub stores the new data until the next deployment.
