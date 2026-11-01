@@ -1,0 +1,26 @@
+CORRECCION PUNTUAL PURCHASE DASHBOARD - 01 NOV 2026
+
+ARCHIVOS A REEMPLAZAR EN GITHUB (rama main):
+1. scripts/build.mjs
+2. assets/js/app.mjs
+
+NO hace falta cambiar Resend ni las variables Cloudflare.
+
+CAUSA PRINCIPAL: scripts/build.mjs no copiaba alerts-test.html a dist, por lo que Cloudflare mostraba index.html como fallback al abrir /alerts-test.html.
+
+MEJORA DEFENSIVA: app.mjs evita que la asignacion del evento al boton dinamico inspectSource produzca un fallo cuando el elemento no esta disponible. Esto no garantiza que todos los posibles errores de carga de datos esten corregidos.
+
+PROCEDIMIENTO:
+- Abrir GitHub > repositorio Purchase-Executive-Dashboard > rama main.
+- Navegar a scripts/build.mjs > Editar (lapiz) > reemplazar contenido con el archivo del ZIP > Commit changes.
+- Repetir en assets/js/app.mjs.
+- Cloudflare Pages se despliega automaticamente tras los commits.
+- Abrir https://purchase-executive-dashboard.pages.dev/alerts-test.html con Ctrl+Shift+R.
+- Debe mostrar 'Alert email testing centre' y cuatro formularios.
+- Para la primera prueba, enviar solamente al correo autorizado en Resend con remitente onboarding@resend.dev.
+
+VERIFICACION LOCAL:
+- npm run check: OK.
+- npm run build: OK. Se verifico dist/alerts-test.html.
+- npm test: 40/43 pasan; tres fallos previos en pruebas del plan compartido, no corregidos aqui.
+- 0 recepciones confirmadas en datos actuales: no interpretar alertas reales de sell-through/stock como validadas.

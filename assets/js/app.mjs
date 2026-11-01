@@ -60,7 +60,7 @@ function render(){
  const unresolved=Number(evidence.supplementaryUnattributedUnits||0)+Number(evidence.supplementaryMissingCatalogUnits||0);
  const reconcile=unresolved?` <strong>${number(unresolved)} PO-received units from imported CSVs require SKU/catalog reconciliation and are excluded from product-level figures.</strong>`:'';
  $('sourceNote').innerHTML=`<div><strong>${missing?'Purchase-order access needs attention':groups.length?'Supplier receipt records available':'No confirmed receipts in this selection'}</strong><p>${missing?'Purchase-order GraphQL access was denied and no verified inventory receipt events are present. Document-linked ShopifyQL receipts can still be used when available, but receipt costs may remain unavailable.':'Receipt-based figures use only confirmed supplier entries. Positive inventory adjustments do not count as purchases.'} <b>Units In (verified): ${totals.units==null?'Pending source':number(totals.units)}</b>.${reconcile}${unverified?` <strong>${number(movementTotal)} units of dated positive manual stock adjustments; these are NOT verified supplier receipts.</strong>`:''}</p></div><button class="secondary" id="inspectSource">Review source</button>`;
- $('inspectSource').onclick=openSources;
+ $('inspectSource')?.addEventListener('click',openSources);
  // Five reference KPIs. Missing source metrics remain pending; do not reuse
  // catalog figures as receipt cost or gross profit. 30-day rate is mature FIFO.
  $('purchaseKpis').innerHTML=[

@@ -42,7 +42,7 @@ const report={version:2,meta,asOf:dates[0],receipts:(source.cohorts||[]).filter(
 // Validate the source before replacing the previous output.
 if(path.dirname(out)!==root||(await fs.lstat(out).catch(()=>null))?.isSymbolicLink())throw Error('Unsafe build output');
 await fs.rm(out,{recursive:true,force:true});await fs.mkdir(path.join(out,'data'),{recursive:true});
-for(const name of ['index.html','site-config.json','access-config.json'])await fs.copyFile(path.join(root,name),path.join(out,name));
+for(const name of ['index.html','alerts-test.html','site-config.json','access-config.json'])await fs.copyFile(path.join(root,name),path.join(out,name));
 await fs.cp(path.join(root,'assets'),path.join(out,'assets'),{recursive:true});
 // Shard daily sales/catalog; include only compact monthly vendor movement, never the raw heavy monthly history.
 const manifest={version:1,generatedAt:meta.generatedAt,files:[]};
