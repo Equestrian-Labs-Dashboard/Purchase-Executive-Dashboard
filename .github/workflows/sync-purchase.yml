@@ -2,10 +2,9 @@ name: Purchase · Corro Shopify direct (from November 2026)
 
 on:
   schedule:
-    # Weekly Sundays, from 2026-11-01: 16:17 UTC = 12:17 Bolivia.
-    # October 2026 excluded to consume no Action minutes.
-    # This also skips October in future years; review before 2027-10.
-    - cron: '17 16 * 1-9,11-12 0'
+    # Weekly Mondays at 15:00 UTC: 10:00 New York, 15:00 London, 16:00 Central Europe in November.
+    # No weekend runs; October is excluded to avoid scheduled Action usage during the pause.
+    - cron: '0 15 * 1-9,11-12 1'
   workflow_dispatch:
 
 permissions:
@@ -20,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 240
     steps:
-      - name: Stop before November 1, 2026
+      - name: Enforce start date and weekday (Europe/London)
         id: gate
         shell: bash
         run: |
@@ -28,8 +27,11 @@ jobs:
           import fs from 'node:fs';
           const today = new Intl.DateTimeFormat('en-CA', {timeZone:'America/La_Paz',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
           const get = name => today.find(x=>x.type===name).value;
-          const enabled = `${get('year')}-${get('month')}-${get('day')}` >= '2026-11-01';
+          const date = `${get('year')}-${get('month')}-${get('day')}`;
+          const weekday = new Intl.DateTimeFormat('en-US', {timeZone:'Europe/London',weekday:'short'}).format(new Date());
+          const enabled = date >= '2026-11-01' && !['Sat','Sun'].includes(weekday);
           fs.appendFileSync(process.env.GITHUB_OUTPUT,`enabled=${enabled}\n`);
+          console.log(`Purchase sync ${enabled ? 'enabled' : 'skipped'} for ${date} (${weekday}, Europe/London).`);
           NODE
       - uses: actions/checkout@v4
         if: steps.gate.outputs.enabled == 'true'
