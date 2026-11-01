@@ -1,9 +1,12 @@
-CORRECCION DE EVENTOS DEL DASHBOARD
+CORRECCIÓN 401 — ALERT EMAIL TESTS
 
-1. En GitHub, rama main, abrir assets/js/app.mjs.
-2. Reemplazar el contenido por el archivo incluido en este ZIP.
-3. Commit changes. Esperar el deploy automatico en Cloudflare.
-4. Refrescar el dashboard con Ctrl+Shift+R y verificar si desaparece Data load failed.
+Subir a la rama main de GitHub, respetando rutas:
+1. alerts-test.html (raíz) — REEMPLAZAR.
+2. assets/js/alertEmailTests.mjs — REEMPLAZAR.
 
-Esta revision protege los manejadores onclick/onchange/oninput cuando falta el elemento correspondiente. No cambia calculos ni datos.
-El error 401 del envio de alertas es independiente y NO queda resuelto por esta correccion.
+No reemplazar functions/api/alert-test.js ni desactivar autorización.
+Esta corrección agrega inicio de sesión Google en la pestaña cuando el endpoint devuelve 401. La cuenta debe existir en USER_REGISTRY_SHEET_ID con Report Access purchase_executive o all. Si el usuario no está autorizado, el envío seguirá bloqueado por seguridad.
+
+Cloudflare: esperar nuevo despliegue Success; refrescar con Ctrl+Shift+R; intentar primer correo; si aparece 401, usar botón Google; reintentar. Para onboarding@resend.dev, destinatario debe ser el email permitido por Resend.
+
+NO GARANTIZA ENVÍO HASTA VALIDAR SESIÓN, REGISTRO Y RESTRICCIONES DE RESEND. No se activan envíos automáticos ni costos nuevos.
