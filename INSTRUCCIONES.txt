@@ -1,0 +1,9 @@
+CORRECCION DE EVENTOS DEL DASHBOARD
+
+1. En GitHub, rama main, abrir assets/js/app.mjs.
+2. Reemplazar el contenido por el archivo incluido en este ZIP.
+3. Commit changes. Esperar el deploy automatico en Cloudflare.
+4. Refrescar el dashboard con Ctrl+Shift+R y verificar si desaparece Data load failed.
+
+Esta revision protege los manejadores onclick/onchange/oninput cuando falta el elemento correspondiente. No cambia calculos ni datos.
+El error 401 del envio de alertas es independiente y NO queda resuelto por esta correccion.
